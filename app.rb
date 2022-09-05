@@ -1,3 +1,3 @@
 class App
-  p
+  p 'this is empty for now'
 end

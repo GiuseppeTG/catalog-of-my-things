@@ -1,11 +1,13 @@
-require 'date' # date class for applying archive
+require 'date'
+# date class for applying archive
 
 class Item
   attr_accessor :publish_date
   attr_reader :id, :genre, :author, :label, :archived
 
-  def initialize(publish_date, id = nil)
+  def initialize(title, publish_date, id = nil)
     @id = id || Random.rand(1..1_000_000)
+    @title = title
     @publish_date = publish_date
     @archived = false # by default, item archived is automatically set as false. It can be changed with method.
   end
@@ -35,11 +37,3 @@ class Item
     label.add_item(self) unless label.items.include?(self)
   end
 end
-
-publish_date = '1995-04-10'
-p DateTime.now.year
-p Date.parse(publish_date).year
-p DateTime.now.year - Date.parse(publish_date).year
-
-item1 = Item.new('2020-01-01')
-p item1.can_be_archived?
