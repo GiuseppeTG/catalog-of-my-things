@@ -52,6 +52,12 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
+👤 **Waqas Ahmad**
+
+- GitHub: [@githubhandle](https://github.com/waqaskanju)
+- Twitter: [@twitterhandle](https://twitter.com/waqaskanju)
+- LinkedIn: [@LinkedIn](https://linkedin.com/in/waqaskanju)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
