@@ -4,11 +4,42 @@ require_relative './lib/book'
 require_relative './lib/main_menu'
 
 class App
+  def initialize
+    @items = read_file('data/items.json')['items']
+    @genres = read_file('data/items.json')
+    @authors = read_file('data/items.json')
+    @labels = read_file('data/items.json')
+  end
+
+  def read_file(file_name)
+    JSON.parse(File.read(file_name))
+  end
+
   def init
     initialize
     MainMenu.new.display_main_menu
     option = gets.chomp.to_i
     run_option(option)
+  end
+
+  def write_files
+    files = [
+
+      { name: 'items', data: @items },
+      { name: 'genres', data: @genres },
+      { name: 'authors', data: @authors },
+      { name: 'labels', data: @labels },
+      { name: 'sources', data: @sources }
+
+    ]
+
+    files.each do |file|
+      File.open("data/#{file[:name]}.json", 'w') do |f|
+        data_hash = { file[:name] => file[:data] }
+        json = JSON.pretty_generate(data_hash)
+        f.write(json)
+      end
+    end
   end
 
   def run_option(option)
