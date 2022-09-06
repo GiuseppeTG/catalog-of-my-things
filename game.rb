@@ -13,7 +13,7 @@ class Game < Item
 
     def can_be_archived?()
         value = false
-        if super(can_be_archived?) || last_played_at
+        if super(can_be_archived?) && last_played_at
             value =true
         end
         value
