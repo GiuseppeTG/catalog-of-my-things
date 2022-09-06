@@ -1,6 +1,6 @@
 class Item
-    attr_accessor :id,  :publish_date, :archived
-    attr_reader  :genre, :author, :label
+    attr_accessor :id,  :publish_date, :archived, :author
+    attr_reader  :genre, :label
 
 
     def initialize(id, publish_date, archived)
@@ -12,6 +12,13 @@ class Item
 
     def can_be_archived?()
         return true if @publish_date > 10
+    end
+
+    #to fill both way relationship
+    
+    def author=(author)
+    @author = author
+    author.items.push(self) unless author.items.include?(self)
     end
 
     private
