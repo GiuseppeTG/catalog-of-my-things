@@ -1,4 +1,8 @@
+require './app'
 require './item'
+require './game_option'
+require './data_handler'
+
 
 class Main
     include Item
@@ -30,6 +34,8 @@ class Main
         add_game()
         main
         when '5'
+        # add all the data which we want to save in json file
+        # for example save game, save author, save item etc    
         save_data()
         main
 
