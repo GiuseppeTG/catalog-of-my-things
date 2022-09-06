@@ -36,4 +36,9 @@ class Item
     @label = label
     label.add_item(self) unless label.items.include?(self)
   end
+
+  def add_source(source)
+    @source = source
+    source.add_item(self) unless source.items.include?(self)
+  end
 end
