@@ -25,6 +25,28 @@
       "author_id": null,
       "genre_id": null,
       "source_id": null
+    },
+    {
+      "json_class": "Book",
+      "id": 989308,
+      "publish_date": "2022-2-6",
+      "archived": true,
+      "title": "thores",
+      "cover_state": "bad",
+      "publisher": "acm",
+      "label_id": 198579,
+      "author_id": null,
+      "genre_id": null,
+      "source_id": null
+    },
+    {
+      "json_class": "Game",
+      "id": 430961,
+      "title": "mygame",
+      "publish_date": "2022-3-4",
+      "archived": false,
+      "multiplayer": "yes",
+      "last_played_at": "2"
     }
   ]
 }
