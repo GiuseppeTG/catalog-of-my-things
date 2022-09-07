@@ -24,7 +24,7 @@ class Book < Item
       'title' => @title,
       'cover_state' => @cover_state,
       'publisher' => @publisher,
-      'label_id' => @label.id,
+      'label_id' => @label ? @label.id : nil,
       'author_id' => @author,
       'genre_id' => @genre,
       'source_id' => @source

@@ -3,6 +3,7 @@ require 'json'
 require_relative './book'
 require_relative './main_menu'
 require_relative './label'
+require_relative './set_label'
 
 class App
   def initialize
@@ -110,18 +111,7 @@ class App
     input_cover_state = gets.chomp
     puts input_cover_state
     book = Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
-
-    puts 'Do you want to add a label to the book? [Y/N]'
-    input_label_option = gets.chomp.capitalize
-    p input_label_option
-    puts 'Enter a label title'
-    input_label_title = gets.chomp
-    puts 'Enter a label color'
-    input_label_color = gets.chomp
-    label = Label.new(input_label_title, input_label_color)
-    book.add_label(label)
-    @labels << label
-    book.move_to_archive
+    SetLabel.new.label_options(book, @labels)
     @items << book
     write_files
     init
