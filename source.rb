@@ -1,10 +1,8 @@
 require_relative './item'
 
-class Source < item
-  attr_reader :items
-  def initialize(title, publish_date, name, id = nil)
-    super(title, publish_date, id)
-
+class Source
+  attr_reader :items, :title, :publish_date
+  def initialize(name, id = nil)
     @id = id || Random.rand(1..1_000_000)
     @items = []
     @name = name
