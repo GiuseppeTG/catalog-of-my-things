@@ -1,6 +1,7 @@
 require_relative './item'
 
 class Source < item
+  attr_reader :items
   def initialize(title, publish_date, name id = nil)
     super(title, publish_date, id)
 
