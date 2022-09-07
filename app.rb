@@ -10,6 +10,7 @@ class App
     @genres = read_file('data/genres.json')['genres']
     @authors = read_file('data/authors.json')['authors']
     @labels = read_file('data/labels.json')['labels']
+    @sources = read_file('data/sources.json')['sources']
   end
 
   def read_file(file_name)
@@ -109,6 +110,7 @@ class App
     input_cover_state = gets.chomp
     puts input_cover_state
     book = Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
+
     puts 'Do you want to add a label to the book? [Y/N]'
     input_label_option = gets.chomp.capitalize
     p input_label_option
