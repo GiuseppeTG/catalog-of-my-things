@@ -3,6 +3,8 @@ require 'json'
 require_relative './book'
 require_relative './main_menu'
 require_relative './label'
+require_relative './menu_label'
+require_relative './menu_book'
 
 class App
   def initialize
@@ -99,29 +101,8 @@ class App
   end
 
   def add_book
-    puts 'Adding a book...'
-    puts 'Enter the title of the book?'
-    input_title = gets.chomp
-    puts 'Enter the publish date of the book'
-    input_publish_date = gets.chomp
-    puts 'Enter the publisher of the book'
-    input_publisher = gets.chomp
-    puts 'Enter the cover state of the book [bad / good]'
-    input_cover_state = gets.chomp
-    puts input_cover_state
-    book = Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
-
-    puts 'Do you want to add a label to the book? [Y/N]'
-    input_label_option = gets.chomp.capitalize
-    p input_label_option
-    puts 'Enter a label title'
-    input_label_title = gets.chomp
-    puts 'Enter a label color'
-    input_label_color = gets.chomp
-    label = Label.new(input_label_title, input_label_color)
-    book.add_label(label)
-    @labels << label
-    book.move_to_archive
+    book = MenuBook.new.book_options
+    MenuLabel.new.label_options(book, @labels)
     @items << book
     write_files
     init
@@ -146,4 +127,7 @@ class App
     p 'Thanks for usig this App, Bye'
   end
 end
+
+b1 = Book.new('title', '2022-02-02', 1234, 'qrew', 'bad')
+p b1
 # rubocop:enable Metrics/CyclomaticComplexity
