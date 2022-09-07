@@ -1,14 +1,16 @@
 # rubocop:disable Metrics/CyclomaticComplexity
 require 'json'
-require_relative './lib/book'
-require_relative './lib/main_menu'
+require_relative './book'
+require_relative './main_menu'
+require_relative './label'
 
 class App
   def initialize
     @items = read_file('data/items.json')['items']
-    @genres = read_file('data/items.json')
-    @authors = read_file('data/items.json')
-    @labels = read_file('data/items.json')
+    @genres = read_file('data/genres.json')['genres']
+    @authors = read_file('data/authors.json')['authors']
+    @labels = read_file('data/labels.json')['labels']
+    @sources = read_file('data/sources.json')['sources']
   end
 
   def read_file(file_name)
@@ -97,7 +99,31 @@ class App
   end
 
   def add_book
-    p 'Adding a book...'
+    puts 'Adding a book...'
+    puts 'Enter the title of the book?'
+    input_title = gets.chomp
+    puts 'Enter the publish date of the book'
+    input_publish_date = gets.chomp
+    puts 'Enter the publisher of the book'
+    input_publisher = gets.chomp
+    puts 'Enter the cover state of the book [bad / good]'
+    input_cover_state = gets.chomp
+    puts input_cover_state
+    book = Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
+
+    puts 'Do you want to add a label to the book? [Y/N]'
+    input_label_option = gets.chomp.capitalize
+    p input_label_option
+    puts 'Enter a label title'
+    input_label_title = gets.chomp
+    puts 'Enter a label color'
+    input_label_color = gets.chomp
+    label = Label.new(input_label_title, input_label_color)
+    book.add_label(label)
+    @labels << label
+    book.move_to_archive
+    @items << book
+    write_files
     init
   end
 

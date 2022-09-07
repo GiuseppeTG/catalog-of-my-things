@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "json_class": "Book",
+      "id": 382310,
+      "publish_date": "2022-02-02",
+      "archived": true,
+      "title": "wertwert",
+      "cover_state": "bad",
+      "publisher": "dsfoghsd",
+      "label_id": 339823,
+      "author_id": null,
+      "genre_id": null,
+      "source_id": null
+    },
+    {
+      "json_class": "Book",
+      "id": 588717,
+      "publish_date": "2002-02-02",
+      "archived": true,
+      "title": "hgwqf",
+      "cover_state": "bad",
+      "publisher": "iasjdhfas",
+      "label_id": 399839,
+      "author_id": null,
+      "genre_id": null,
+      "source_id": null
+    }
+  ]
+}

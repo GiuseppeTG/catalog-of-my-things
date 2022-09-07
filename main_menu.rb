@@ -1,8 +1,7 @@
 class MainMenu
-  puts 'Welcome to School Library App!'
-
   def display_main_menu
-    puts "Please choose an option by entering a number:
+    puts '
+    Enter the number of the option
 
     0) List all books
     1) List all music albums
@@ -11,13 +10,11 @@ class MainMenu
     4) List all labels
     5) List all authors
     6) List all sources
-    7) Add a book
-    8) Add a music album
-    9) Add a game
-    10) Add a movie
-    11) EXIT
-    "
-
-    puts 'Enter your option here:'
+    7) Add a new book
+    8) Add a new music album
+    9) Add a new game
+    10) Add a new movie
+    11) Quit the app
+    '
   end
 end
