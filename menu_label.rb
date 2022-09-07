@@ -1,7 +1,5 @@
 class MenuLabel
   def label_options(item, labels)
-    p item
-    p labels
     puts 'Do you want to add a label to the book? [Y/N]'
     answer = gets.chomp.upcase
     return if %w[N NO].include?(answer)
@@ -16,8 +14,7 @@ class MenuLabel
     input_label_title = gets.chomp.capitalize
     puts 'Enter a label color'
     input_label_color = gets.chomp.capitalize
-
-    Label.new(input_label_title, input_label_color)
+    label = Label.new(input_label_title, input_label_color)
     item.add_label(label)
     labels << label
   end

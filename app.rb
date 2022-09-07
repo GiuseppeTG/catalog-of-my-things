@@ -4,6 +4,7 @@ require_relative './book'
 require_relative './main_menu'
 require_relative './label'
 require_relative './menu_label'
+require_relative './menu_book'
 
 class App
   def initialize
@@ -100,18 +101,7 @@ class App
   end
 
   def add_book
-    p @items
-    puts 'Adding a book...'
-    puts 'Enter the title of the book?'
-    input_title = gets.chomp
-    puts 'Enter the publish date of the book'
-    input_publish_date = gets.chomp
-    puts 'Enter the publisher of the book'
-    input_publisher = gets.chomp
-    puts 'Enter the cover state of the book [bad / good]'
-    input_cover_state = gets.chomp
-    puts input_cover_state
-    book = Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
+    book = MenuBook.new.book_options
     MenuLabel.new.label_options(book, @labels)
     @items << book
     write_files
@@ -138,4 +128,6 @@ class App
   end
 end
 
+b1 = Book.new('title', '2022-02-02', 1234, 'qrew', 'bad')
+p b1
 # rubocop:enable Metrics/CyclomaticComplexity
