@@ -1,5 +1,3 @@
-require_relative './item'
-
 class Source
   attr_reader :items, :title, :publish_date
   def initialize(name, id = nil)
