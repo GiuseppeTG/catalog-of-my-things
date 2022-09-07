@@ -1,5 +1,3 @@
-require 'ostruct'
-
 class SetLabel
   def label_options(item, labels)
     p item
