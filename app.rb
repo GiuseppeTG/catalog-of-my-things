@@ -4,6 +4,7 @@ require_relative './book'
 require_relative './main_menu'
 require_relative './label'
 require_relative './game'
+require_relative './author'
 
 class App
   def initialize
@@ -59,6 +60,7 @@ class App
     when 9 then add_game
     when 10 then add_movie
     when 11 then quit_app
+    when 12 then add_author
     else p 'Please enter a valid option, number from 0 to 11'
          init
     end
@@ -175,6 +177,25 @@ class App
 
   def quit_app
     p 'Thanks for usig this App, Bye'
+  end
+
+  def add_author
+    puts 'Adding a new Author...'
+
+    puts 'Enter the First Name ?'
+    input_first_name = gets.chomp
+
+    puts 'Enter the Last Name ?'
+    input_last_name = gets.chomp
+
+    # puts 'which books this author own'
+    # input_books = gets.chomp
+    
+    author = Author.new(input_first_name, input_last_name)
+
+    @authors << author
+    write_files
+    init
   end
 end
 # rubocop:enable Metrics/CyclomaticComplexity

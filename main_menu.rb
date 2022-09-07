@@ -15,6 +15,7 @@ class MainMenu
     9) Add a new game
     10) Add a new movie
     11) Quit the app
+    12) Add Author
     '
   end
 end
