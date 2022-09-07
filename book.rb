@@ -1,5 +1,6 @@
 require 'json'
 require_relative './item'
+require_relative './label'
 
 class Book < Item
   attr_accessor :title, :publisher, :cover_state
@@ -21,18 +22,26 @@ class Book < Item
       'publish_date' => @publish_date,
       'archived' => @archived,
       'title' => @title,
-      'author' => @author,
       'cover_state' => @cover_state,
-      'publisher' => @publisher
+      'publisher' => @publisher,
+      'label_id' => @label.id,
+      'author_id' => @author,
+      'genre_id' => @genre,
+      'source_id' => @source
     }.to_json(*args)
   end
 
   def self.json_create(book)
-    new(book['id'], book['publish_date'], book['archived'], book['author'], book['cover_state'], book['publisher'])
+    new(book['id'], book['title'], book['publish_date'], book['archived'], book['cover_state'], book['publisher'],
+        book['author'], book['label'], book['genre'], book['source'])
   end
 end
 
-b1 = Book.new('1984', '2000-08-23', 'publisher1', 'bad')
-p b1
-p b1.can_be_archived?
-b1.to_json
+# b1 = Book.new('1984', '2000-08-23', 'publisher1', 'bad')
+# label = Label.new('NEW', 'yellow')
+# b1.add_label(label)
+# json = b1.to_json
+# p json
+# p b1.can_be_archived?
+# b1.move_to_archive
+# p b1
