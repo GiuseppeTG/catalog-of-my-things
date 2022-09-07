@@ -3,7 +3,7 @@ require 'json'
 require_relative './book'
 require_relative './main_menu'
 require_relative './label'
-require_relative './set_label'
+require_relative './menu_label'
 
 class App
   def initialize
@@ -100,6 +100,7 @@ class App
   end
 
   def add_book
+    p @items
     puts 'Adding a book...'
     puts 'Enter the title of the book?'
     input_title = gets.chomp
@@ -111,7 +112,7 @@ class App
     input_cover_state = gets.chomp
     puts input_cover_state
     book = Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
-    SetLabel.new.label_options(book, @labels)
+    MenuLabel.new.label_options(book, @labels)
     @items << book
     write_files
     init
@@ -136,4 +137,5 @@ class App
     p 'Thanks for usig this App, Bye'
   end
 end
+
 # rubocop:enable Metrics/CyclomaticComplexity
