@@ -8,4 +8,8 @@ class Source < item
     @id = id || Random.rand(1..1_000_000)
     @items = []
   end
+
+  def add_item(item)
+    @items << item
+  end
 end
