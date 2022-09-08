@@ -75,6 +75,7 @@ class App
       print "Label: #{book['label'][0]['title']} (#{book['label'][0]['color']}) " if book['label']
       print "Source: #{book['source'][0]['name']} " if book['source']
     end
+    init
   end
 
   def list_music_albums
@@ -94,6 +95,10 @@ class App
 
   def list_labels
     p 'List of labels'
+    @labels.each do |lab|
+      puts "Title: #{lab['title']} - Color: #{lab['color']} - Id: #{lab['id']}"
+    end
+
     init
   end
 
@@ -109,9 +114,6 @@ class App
 
   def add_book
     book = MenuBook.new.book_options
-    MenuLabel.new.label_options(book, @labels)
-    MenuLabel.new.label_options(book, @labels)
-    MenuLabel.new.label_options(book, @labels)
     MenuLabel.new.label_options(book, @labels)
     @items << book
     write_files
