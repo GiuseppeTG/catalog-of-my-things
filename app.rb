@@ -4,9 +4,7 @@ require_relative './book'
 require_relative './main_menu'
 require_relative './label'
 require_relative './menu_label'
-require_relative './menu_genre'
-require_relative './music_album'
-require_relative './genre'
+require_relative './menu_book'
 
 class App
   def initialize
@@ -69,7 +67,14 @@ class App
 
   def list_books
     p 'List of books'
-    init
+    books = @items.select { |item| item['json_class'] == 'Book' }
+    books.each do |book|
+      print "Title: #{book['title']} "
+      print "Author: #{book['author'][0]['first_name']} #{book['author'][0]['last_name']} " if book['author']
+      print "Genre: #{book['genre'][0]['name']} " if book['genre']
+      print "Label: #{book['label'][0]['title']} (#{book['label'][0]['color']}) " if book['label']
+      print "Source: #{book['source'][0]['name']} " if book['source']
+    end
   end
 
   def list_music_albums
@@ -103,18 +108,7 @@ class App
   end
 
   def add_book
-    # p @items
-    puts 'Adding a book...'
-    puts 'Enter the title of the book?'
-    input_title = gets.chomp
-    puts 'Enter the publish date of the book'
-    input_publish_date = gets.chomp
-    puts 'Enter the publisher of the book'
-    input_publisher = gets.chomp
-    puts 'Enter the cover state of the book [bad / good]'
-    input_cover_state = gets.chomp
-    puts input_cover_state
-    book = Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
+    book = MenuBook.new.book_options
     MenuLabel.new.label_options(book, @labels)
     @items << book
     write_files
@@ -122,20 +116,10 @@ class App
   end
 
   def add_music_album
-    puts 'Enter the title of the music album?'
-    input_title = gets.chomp
-    puts 'Enter the publish date of the music album'
-    input_publish_date = gets.chomp
-    puts 'Enter the publisher of the music album'
-    input_publisher = gets.chomp
-    puts 'Is this music album available on Spotify? [Y/N]'
-    input_spotify_option = gets.chomp
-    input_on_spotify = true unless input_spotify_option == 'N'
-    music_album = MusicAlbum.new(input_title, input_publish_date, input_publisher, input_on_spotify)
-
-    MenuGenre.new.genre_options(music_album, @genres)
+    music_album = MenuMusicAlbum.new.music_album_options
     MenuLabel.new.label_options(music_album, @labels)
-
+    MenuGenre.new.genre_options(music_album, @genres)
+    @items << music_album
     write_files
     init
   end
