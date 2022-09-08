@@ -12,4 +12,14 @@ describe Movie do
       expect(movie.silent).to be false
     end
   end
+
+  context 'When date published is older than 10 years' do
+    title = 'The Shawshank Redemption'
+    publish_date = '2009-10-10'
+
+    it 'it can be archived' do
+      movie = Movie.new(title, publish_date)
+      expect(movie.can_be_archived?).to be true
+    end
+  end
 end
