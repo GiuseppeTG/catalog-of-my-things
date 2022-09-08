@@ -25,6 +25,19 @@
       "author_id": null,
       "genre_id": null,
       "source_id": null
+    },
+    {
+      "json_class": "Book",
+      "id": 413524,
+      "publish_date": "2000-01-01",
+      "archived": false,
+      "title": "aaa",
+      "cover_state": "bad",
+      "publisher": "asc",
+      "label_id": 165933,
+      "author_id": null,
+      "genre_id": null,
+      "source_id": null
     }
   ]
 }
