@@ -146,6 +146,7 @@ class App
   def add_game
     game = MenuGame.new.game_options
     MenuLabel.new.label_options(game, @labels)
+    MenuAuthor.new.author_options(game, @authors)
     @items << game
     write_files
     init
