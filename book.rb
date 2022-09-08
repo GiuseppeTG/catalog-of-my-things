@@ -24,10 +24,10 @@ class Book < Item
       'title' => @title,
       'cover_state' => @cover_state,
       'publisher' => @publisher,
-      'label_id' => @label ? @label.id : nil,
-      'author_id' => @author,
-      'genre_id' => @genre,
-      'source_id' => @source
+      'label' => @label ? ['id' => @label.id, 'title' => @label.title, 'color' => @label.color] : nil,
+      'author' => @author ? ['id' => @author.id, 'first_name' => @author.first_name, 'last_name' => author.last_name] : nil,
+      'genre' => @genre ? ['id' => @genre.id, 'name' => @genre.name] : nil,
+      'source' => @source ? ['id' => @source.id, 'name' => @source.name] : nil
     }.to_json(*args)
   end
 
@@ -36,12 +36,3 @@ class Book < Item
         book['author'], book['label'], book['genre'], book['source'])
   end
 end
-
-# b1 = Book.new('1984', '2000-08-23', 'publisher1', 'bad')
-# label = Label.new('NEW', 'yellow')
-# b1.add_label(label)
-# json = b1.to_json
-# p json
-# p b1.can_be_archived?
-# b1.move_to_archive
-# p b1

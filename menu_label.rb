@@ -21,6 +21,6 @@ class MenuLabel
                   Label.new(input_label_title, input_label_color)
                 end
     item.add_label(new_label)
-    labels << new_label
+    labels << new_label unless label
   end
 end

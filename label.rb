@@ -10,8 +10,6 @@ class Label
   end
 
   def add_item(item)
-    # return unless item.instance_of?(Item) && !@items.include?(item)
-
     @items.push(item)
     item.add_label(self)
   end
@@ -21,8 +19,7 @@ class Label
       JSON.create_id => self.class.name,
       'id' => @id,
       'title' => @title,
-      'color' => @color,
-      'items' => @items
+      'color' => @color
     }.to_json(*args)
   end
 

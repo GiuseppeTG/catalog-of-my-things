@@ -13,7 +13,6 @@ class App
     @authors = read_file('data/authors.json')['authors']
     @labels = read_file('data/labels.json')['labels']
     @sources = read_file('data/sources.json')['sources']
-    write_abc
   end
 
   def read_file(file_name)
@@ -35,25 +34,25 @@ class App
     end
   end
 
-  # def write_abc
-  #   files = [
+  def write_files
+    files = [
 
-  #     { name: 'genres', data: @genres },
-  #     { name: 'authors', data: @authors },
-  #     { name: 'labels', data: @labels },
-  #     { name: 'sources', data: @sources }
+      { name: 'items', data: @items },
+      { name: 'genres', data: @genres },
+      { name: 'authors', data: @authors },
+      { name: 'labels', data: @labels },
+      { name: 'sources', data: @sources }
 
-  #   ]
+    ]
 
-  #   files.each do |file|
-  #     File.open("data/#{file[:name]}.json", 'w') do |f|
-  #       p file[:data]
-  #       data_hash = { file[:name] => file[:data] }
-  #       json = JSON.pretty_generate(data_hash)
-  #       f.write(json)
-  #     end
-  #   end
-  # end
+    files.each do |file|
+      File.open("data/#{file[:name]}.json", 'w') do |f|
+        data_hash = { file[:name] => file[:data] }
+        json = JSON.pretty_generate(data_hash)
+        f.write(json)
+      end
+    end
+  end
 
   def run_option(option)
     case option
@@ -76,7 +75,14 @@ class App
 
   def list_books
     p 'List of books'
-    init
+    books = @items.select { |item| item['json_class'] == 'Book' }
+    books.each do |book|
+      print "Title: #{book['title']} "
+      print "Author: #{book['author'][0]['first_name']} #{book['author'][0]['last_name']} " if book['author']
+      print "Genre: #{book['genre'][0]['name']} " if book['genre']
+      print "Label: #{book['label'][0]['title']} (#{book['label'][0]['color']}) " if book['label']
+      print "Source: #{book['source'][0]['name']} " if book['source']
+    end
   end
 
   def list_music_albums
@@ -113,7 +119,7 @@ class App
     book = MenuBook.new.book_options
     MenuLabel.new.label_options(book, @labels)
     @items << book
-    write_items
+    write_files
     init
   end
 

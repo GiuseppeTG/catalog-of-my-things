@@ -2,45 +2,15 @@
   "labels": [
     {
       "json_class": "Label",
-      "id": 479001,
+      "id": 154863,
       "title": "New",
-      "color": "Green",
-      "items": [
-        {
-          "json_class": "Book",
-          "id": 119643,
-          "publish_date": "2002-02-02",
-          "archived": false,
-          "title": "asdf",
-          "cover_state": "bad",
-          "publisher": "asdf",
-          "label_id": 479001,
-          "author_id": null,
-          "genre_id": null,
-          "source_id": null
-        }
-      ]
+      "color": "Green"
     },
     {
       "json_class": "Label",
-      "id": 479001,
-      "title": "New",
-      "color": "Green",
-      "items": [
-        {
-          "json_class": "Book",
-          "id": 604357,
-          "publish_date": "2001-04-04",
-          "archived": false,
-          "title": "qwer",
-          "cover_state": "bad",
-          "publisher": "rtyu",
-          "label_id": 479001,
-          "author_id": null,
-          "genre_id": null,
-          "source_id": null
-        }
-      ]
+      "id": 76944,
+      "title": "Free",
+      "color": "Blue"
     }
   ]
 }

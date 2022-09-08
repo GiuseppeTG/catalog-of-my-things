@@ -11,7 +11,19 @@ class MenuBook
     input_publisher = gets.chomp
     puts 'Enter the cover state of the book [bad / good]'
     input_cover_state = gets.chomp
-    puts input_cover_state
-    Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
+    book = Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
+    if book.can_be_archived?
+      puts 'Do you want to archive the book? [Y/N]'
+      answer = gets.chomp.upcase
+      return if %w[N NO].include?(answer)
+
+      until %w[Y YES N NO].include?(answer)
+        print 'Wrong option, please enter [Y/N] '
+        answer = gets.chomp.upcase
+      end
+      %w[Y YES].include?(answer)
+      book.move_to_archive
+    end
+    book
   end
 end

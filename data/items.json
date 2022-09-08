@@ -2,107 +2,60 @@
   "items": [
     {
       "json_class": "Book",
-      "id": 142522,
-      "publish_date": "2002-02-02",
+      "id": 541517,
+      "publish_date": "2002-06-06",
       "archived": false,
-      "title": "qwer",
+      "title": "yyyyrtt",
       "cover_state": "bad",
-      "publisher": "qwer",
-      "label_id": 605424,
+      "publisher": "opop",
+      "label": [
+        {
+          "id": 154863,
+          "title": "New",
+          "color": "Green"
+        }
+      ],
       "author_id": null,
       "genre_id": null,
       "source_id": null
     },
     {
       "json_class": "Book",
-      "id": 382124,
-      "publish_date": "2000-02-02",
+      "id": 19735,
+      "publish_date": "2001-08-08",
       "archived": false,
-      "title": "qwer",
+      "title": "tttt",
       "cover_state": "good",
-      "publisher": "uytui",
-      "label_id": 490838,
+      "publisher": "gonzalo",
+      "label": [
+        {
+          "id": 154863,
+          "title": "New",
+          "color": "Green"
+        }
+      ],
       "author_id": null,
       "genre_id": null,
       "source_id": null
     },
     {
       "json_class": "Book",
-      "id": 240953,
-      "publish_date": "2022-02-02",
-      "archived": false,
-      "title": "qwer",
+      "id": 995394,
+      "publish_date": "2012-12-12",
+      "archived": true,
+      "title": "title1",
       "cover_state": "bad",
-      "publisher": "woqeiu",
-      "label_id": 862405,
-      "author_id": null,
-      "genre_id": null,
-      "source_id": null
-    },
-    {
-      "json_class": "Book",
-      "id": 504379,
-      "publish_date": "2022-02-02",
-      "archived": false,
-      "title": "asdf",
-      "cover_state": "bad",
-      "publisher": "asdf",
-      "label_id": 203393,
-      "author_id": null,
-      "genre_id": null,
-      "source_id": null
-    },
-    {
-      "json_class": "Book",
-      "id": 560928,
-      "publish_date": "2022-02-02",
-      "archived": false,
-      "title": "asdf",
-      "cover_state": "bad",
-      "publisher": "asdf",
-      "label_id": 295937,
-      "author_id": null,
-      "genre_id": null,
-      "source_id": null
-    },
-    {
-      "json_class": "Book",
-      "id": 601795,
-      "publish_date": "2002-01-01",
-      "archived": false,
-      "title": "asdf",
-      "cover_state": "bad",
-      "publisher": "yyyy",
-      "label_id": 295937,
-      "author_id": null,
-      "genre_id": null,
-      "source_id": null
-    },
-    {
-      "json_class": "Book",
-      "id": 119643,
-      "publish_date": "2002-02-02",
-      "archived": false,
-      "title": "asdf",
-      "cover_state": "bad",
-      "publisher": "asdf",
-      "label_id": 479001,
-      "author_id": null,
-      "genre_id": null,
-      "source_id": null
-    },
-    {
-      "json_class": "Book",
-      "id": 604357,
-      "publish_date": "2001-04-04",
-      "archived": false,
-      "title": "qwer",
-      "cover_state": "bad",
-      "publisher": "rtyu",
-      "label_id": 479001,
-      "author_id": null,
-      "genre_id": null,
-      "source_id": null
+      "publisher": "juan",
+      "label": [
+        {
+          "id": 76944,
+          "title": "Free",
+          "color": "Blue"
+        }
+      ],
+      "author": null,
+      "genre": null,
+      "source": null
     }
   ]
 }
