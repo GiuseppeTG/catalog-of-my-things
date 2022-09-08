@@ -41,6 +41,3 @@ class Game < Item
     super && last_played_at > 1
   end
 end
-
-# g= Game.new('mytitle', 2022-3-2,  2, true)
-# p g

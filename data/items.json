@@ -2,141 +2,20 @@
   "items": [
     {
       "json_class": "Game",
-      "id": 621713,
-      "title": "gta",
-      "publish_date": "2020-6-9",
-      "archived": false,
-      "label": null,
-      "author": [
-        {
-          "id": 5,
-          "first_name": "Waqas",
-          "last_name": "Ahmad"
-        }
-      ],
-      "genre": null,
-      "source": null,
-      "multiplayer": "y",
-      "last_played_at": "3"
-    },
-    {
-      "json_class": "Game",
-      "id": 142772,
-      "title": "doom",
-      "publish_date": "2002-02-02",
-      "archived": false,
-      "label": [
-        {
-          "id": 154863,
-          "title": "New",
-          "color": "Green"
-        }
-      ],
-      "author": [
-        {
-          "id": 5,
-          "first_name": "Waqas",
-          "last_name": "Ahmad"
-        }
-      ],
-      "genre": null,
-      "source": null,
-      "multiplayer": "y",
-      "last_played_at": 1
-    },
-    {
-      "json_class": "Game",
-      "id": 3,
-      "title": "doom",
-      "publish_date": "2022-01-01",
-      "archived": false,
-      "label": null,
-      "author": [
-        {
-          "id": 53,
-          "first_name": "Fernando",
-          "last_name": "Silva"
-        }
-      ],
-      "genre": null,
-      "source": null,
-      "multiplayer": false,
-      "last_played_at": true
-    },
-    null,
-    {
-      "json_class": "Game",
-      "id": 1,
-      "title": "zeel2",
-      "publish_date": "2022-2-3",
-      "archived": false,
-      "multiplayer": false,
-      "last_played_at": true,
-      "author": [
-        {
-          "id": 40,
-          "first_name": "Waqar",
-          "last_name": "Khan"
-        }
-      ],
-      "label": null,
-      "genre": null,
-      "source": null
-    },
-    {
-      "json_class": "Book",
-      "id": 973778,
-      "publish_date": "2022-3-2",
-      "archived": false,
-      "title": "abcbook",
-      "cover_state": "dsf",
-      "publisher": "",
-      "label": [
-        {
-          "id": 780235,
-          "title": "D",
-          "color": "Fas"
-        }
-      ],
-      "author": null,
-      "genre": null,
-      "source": null
-    },
-    {
-      "json_class": "Game",
-      "id": 2,
-      "title": "abc",
-      "publish_date": "2022",
-      "archived": false,
-      "multiplayer": false,
-      "last_played_at": true,
-      "author": null,
-      "label": null,
-      "genre": null,
-      "source": null
-    },
-    {
-      "json_class": "Game",
-      "id": 92549,
-      "title": "abc",
+      "id": 17798,
+      "title": "mytitle",
       "publish_date": "2022-3-2",
       "archived": false,
       "multiplayer": true,
-      "last_played_at": 3,
+      "last_played_at": 1,
       "author": [
         {
-          "id": 73,
-          "first_name": "Waqasuth",
-          "last_name": "Ahmadno"
+          "id": 67,
+          "first_name": "Waas",
+          "last_name": "Ahmad"
         }
       ],
-      "label": [
-        {
-          "id": 402846,
-          "title": "Abctitel",
-          "color": "Mycolor"
-        }
-      ],
+      "label": null,
       "genre": null,
       "source": null
     }

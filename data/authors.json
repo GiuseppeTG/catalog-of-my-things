@@ -23,6 +23,12 @@
       "id": 73,
       "first_name": "Waqasuth",
       "last_name": "Ahmadno"
+    },
+    {
+      "json_class": "Author",
+      "id": 67,
+      "first_name": "Waas",
+      "last_name": "Ahmad"
     }
   ]
 }
