@@ -110,6 +110,12 @@ class App
 
   def list_authors
     p 'List of authors'
+    authors = @authors.select { |author| author['json_class'] == 'Author' }
+    authors.each do |author|
+      print "ID: #{author['id']}"
+      print "First Name: #{author['first_name']}"
+      print "Last Name: #{author['last_name']}"
+    end
     init
   end
 
@@ -184,14 +190,13 @@ class App
     puts 'Enter the Last Name ?'
     input_last_name = gets.chomp
 
-    # puts 'which books this author own'
-    # input_books = gets.chomp
-
     author = Author.new(input_first_name, input_last_name)
-
     @authors << author
     write_files
+    puts 'New Author Successfully Created'
     init
   end
 end
-# rubocop:enable Metrics/CyclomaticComplexity
+
+# puts auhorauidthis authoauthorn'
+# input_booIDgeauthorhofirst_nauthorNmlast_nom

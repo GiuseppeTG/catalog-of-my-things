@@ -11,7 +11,7 @@ class Game < Item
     @last_played_at = last_played_at
   end
 
-# Convert game to json format
+  # Convert game to json format
 
   def to_json(*args)
     {
@@ -22,7 +22,6 @@ class Game < Item
       'archived' => @archived,
       'multiplayer' => @multiplayer,
       'last_played_at' => @last_played_at
-
     }.to_json(*args)
   end
 
