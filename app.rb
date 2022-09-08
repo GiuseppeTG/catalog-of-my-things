@@ -5,6 +5,8 @@ require_relative './main_menu'
 require_relative './label'
 require_relative './game'
 require_relative './author'
+require_relative './menu_label'
+require_relative './menu_book'
 
 class App
   def initialize
@@ -24,6 +26,14 @@ class App
     MainMenu.new.display_main_menu
     option = gets.chomp.to_i
     run_option(option)
+  end
+
+  def write_items
+    File.open('data/items.json', 'w') do |f|
+      data_hash = { 'items' => @items }
+      json = JSON.pretty_generate(data_hash)
+      f.write(json)
+    end
   end
 
   def write_files
@@ -68,7 +78,14 @@ class App
 
   def list_books
     p 'List of books'
-    init
+    books = @items.select { |item| item['json_class'] == 'Book' }
+    books.each do |book|
+      print "Title: #{book['title']} "
+      print "Author: #{book['author'][0]['first_name']} #{book['author'][0]['last_name']} " if book['author']
+      print "Genre: #{book['genre'][0]['name']} " if book['genre']
+      print "Label: #{book['label'][0]['title']} (#{book['label'][0]['color']}) " if book['label']
+      print "Source: #{book['source'][0]['name']} " if book['source']
+    end
   end
 
   def list_music_albums
@@ -102,29 +119,8 @@ class App
   end
 
   def add_book
-    puts 'Adding a book...'
-    puts 'Enter the title of the book?'
-    input_title = gets.chomp
-    puts 'Enter the publish date of the book'
-    input_publish_date = gets.chomp
-    puts 'Enter the publisher of the book'
-    input_publisher = gets.chomp
-    puts 'Enter the cover state of the book [bad / good]'
-    input_cover_state = gets.chomp
-    puts input_cover_state
-    book = Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
-
-    puts 'Do you want to add a label to the book? [Y/N]'
-    input_label_option = gets.chomp.capitalize
-    p input_label_option
-    puts 'Enter a label title'
-    input_label_title = gets.chomp
-    puts 'Enter a label color'
-    input_label_color = gets.chomp
-    label = Label.new(input_label_title, input_label_color)
-    book.add_label(label)
-    @labels << label
-    book.move_to_archive
+    book = MenuBook.new.book_options
+    MenuLabel.new.label_options(book, @labels)
     @items << book
     write_files
     init
@@ -143,13 +139,13 @@ class App
 
     puts 'Enter the publish date of the game(yyyy-mm-dd)'
     input_publish_date = gets.chomp
-    
+
     puts 'Is this game multiplaye? [Y/N]'
     input_multiplayer = gets.chomp
-    
+
     puts 'How much time ago it was last used? (no of years?)'
     input_last_used = gets.chomp
-    
+
     game = Game.new(input_title, input_publish_date, input_multiplayer, input_last_used)
 
     puts 'Do you want to add a label to the Game? [Y/N]'
@@ -163,7 +159,7 @@ class App
     game.add_label(label)
     @labels << label
     # need to be fixed
-    #game.move_to_archive
+    # game.move_to_archive
     @items << game
     write_files
     puts 'New Game Successfully Created'
@@ -190,7 +186,7 @@ class App
 
     # puts 'which books this author own'
     # input_books = gets.chomp
-    
+
     author = Author.new(input_first_name, input_last_name)
 
     @authors << author
