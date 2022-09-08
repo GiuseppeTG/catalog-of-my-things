@@ -26,14 +26,6 @@ class App
     run_option(option)
   end
 
-  def write_items
-    File.open('data/items.json', 'w') do |f|
-      data_hash = { 'items' => @items }
-      json = JSON.pretty_generate(data_hash)
-      f.write(json)
-    end
-  end
-
   def write_files
     files = [
 

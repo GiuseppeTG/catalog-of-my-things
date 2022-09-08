@@ -31,8 +31,3 @@ class Book < Item
     new(book['id'], book['publish_date'], book['archived'], book['author'], book['cover_state'], book['publisher'])
   end
 end
-
-b1 = Book.new('1984', '2000-08-23', 'publisher1', 'bad')
-p b1
-p b1.can_be_archived?
-b1.to_json
