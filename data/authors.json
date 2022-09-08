@@ -5,6 +5,12 @@
       "id": 5,
       "first_name": "Waqas",
       "last_name": "Ahmad"
+    },
+    {
+      "json_class": "Author",
+      "id": 53,
+      "first_name": "Fernando",
+      "last_name": "Silva"
     }
   ]
 }

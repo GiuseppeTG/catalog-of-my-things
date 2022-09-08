@@ -18,6 +18,51 @@
       "source": null,
       "multiplayer": "y",
       "last_played_at": "3"
-    }
+    },
+    {
+      "json_class": "Game",
+      "id": 142772,
+      "title": "doom",
+      "publish_date": "2002-02-02",
+      "archived": false,
+      "label": [
+        {
+          "id": 154863,
+          "title": "New",
+          "color": "Green"
+        }
+      ],
+      "author": [
+        {
+          "id": 5,
+          "first_name": "Waqas",
+          "last_name": "Ahmad"
+        }
+      ],
+      "genre": null,
+      "source": null,
+      "multiplayer": "y",
+      "last_played_at": 1
+    },
+    {
+      "json_class": "Game",
+      "id": 3,
+      "title": "doom",
+      "publish_date": "2022-01-01",
+      "archived": false,
+      "label": null,
+      "author": [
+        {
+          "id": 53,
+          "first_name": "Fernando",
+          "last_name": "Silva"
+        }
+      ],
+      "genre": null,
+      "source": null,
+      "multiplayer": false,
+      "last_played_at": true
+    },
+    null
   ]
 }

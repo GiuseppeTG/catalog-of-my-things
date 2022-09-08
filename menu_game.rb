@@ -9,13 +9,21 @@ class MenuGame
     puts 'Enter the publish date of the game(yyyy-mm-dd)'
     input_publish_date = gets.chomp
 
-    puts 'Is this game multiplaye? [Y/N]'
-    input_multiplayer = gets.chomp
+    puts 'Is this a multiplayer game? [Y/N]'
+    answer = gets.chomp.upcase
+    %w[N NO].include?(answer)
+
+    until %w[Y YES N NO].include?(answer)
+      print 'Wrong option, please enter [Y/N] '
+      answer = gets.chomp.upcase
+    end
+    %w[Y YES].include?(answer)
+    input_multiplayer = true
 
     puts 'How much time ago it was last used? (no of years?)'
-    input_last_used = gets.chomp
+    input_last_used = gets.chomp.to_i
 
-    game = Game.new(input_title, input_publish_date, input_multiplayer, input_last_used)
+    game = Game.new(input_title, input_publish_date, input_last_used, input_multiplayer)
 
     if game.can_be_archived?
       puts 'Do you want to archive the game? [Y/N]'
