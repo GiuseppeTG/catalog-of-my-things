@@ -36,6 +36,3 @@ class Book < Item
         book['author'], book['label'], book['genre'], book['source'])
   end
 end
-
-b1 = Book.new('1984', '2000-12-24', 'someone', 'bad')
-p b1
