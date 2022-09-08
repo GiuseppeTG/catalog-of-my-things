@@ -5,4 +5,8 @@ class Movie < Item
     super(title, publish_date, id = nil)
     @silent = silent
   end
+
+  def can_be_archived?
+    super || @silent
+  end
 end
