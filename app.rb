@@ -3,6 +3,9 @@ require 'json'
 require_relative './book'
 require_relative './main_menu'
 require_relative './label'
+require_relative './menu_label'
+require_relative './music_album'
+require_relative './genre'
 
 class App
   def initialize
@@ -99,6 +102,7 @@ class App
   end
 
   def add_book
+    p @items
     puts 'Adding a book...'
     puts 'Enter the title of the book?'
     input_title = gets.chomp
@@ -110,8 +114,39 @@ class App
     input_cover_state = gets.chomp
     puts input_cover_state
     book = Book.new(input_title, input_publish_date, input_publisher, input_cover_state)
+    MenuLabel.new.label_options(book, @labels)
+    @items << book
+    write_files
+    init
+  end
 
-    puts 'Do you want to add a label to the book? [Y/N]'
+  def add_music_album
+    puts 'Enter the title of the music album?'
+    input_title = gets.chomp
+
+    puts 'Enter the publish date of the music album'
+    input_publish_date = gets.chomp
+    puts 'Enter the publisher of the music album'
+    input_publisher = gets.chomp
+    puts 'Is this music album available on Spotify? [Y/N]'
+    input_spotify_option = gets.chomp
+    puts input_spotify_option
+    input_on_spotify = true unless input_spotify_option == 'N'
+
+    music_album = MusicAlbum.new(input_title, input_publish_date, input_publisher, input_on_spotify)
+    MenuLabel.new.label_options(music_album, @labels)
+
+    puts 'Do you want to add a genre to the music album? [Y/N]'
+    input_genre_option = gets.chomp.capitalize
+    p input_genre_option
+    puts 'Enter a genre name'
+    input_genre_name = gets.chomp
+
+    genre = Genre.new(input_genre_name)
+    music_album.add_genre(genre)
+    @genres << genre
+
+    puts 'Do you want to add a label to the music album? [Y/N]'
     input_label_option = gets.chomp.capitalize
     p input_label_option
     puts 'Enter a label title'
@@ -119,16 +154,11 @@ class App
     puts 'Enter a label color'
     input_label_color = gets.chomp
     label = Label.new(input_label_title, input_label_color)
-    book.add_label(label)
+    music_album.add_label(label)
     @labels << label
-    book.move_to_archive
-    @items << book
+    music_album.move_to_archive
+    @items << music_album
     write_files
-    init
-  end
-
-  def add_music_album
-    p 'Adding a music album...'
     init
   end
 
@@ -146,4 +176,5 @@ class App
     p 'Thanks for usig this App, Bye'
   end
 end
+
 # rubocop:enable Metrics/CyclomaticComplexity
