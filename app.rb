@@ -110,6 +110,9 @@ class App
   def add_book
     book = MenuBook.new.book_options
     MenuLabel.new.label_options(book, @labels)
+    MenuLabel.new.label_options(book, @labels)
+    MenuLabel.new.label_options(book, @labels)
+    MenuLabel.new.label_options(book, @labels)
     @items << book
     write_files
     init
