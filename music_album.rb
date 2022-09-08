@@ -4,11 +4,10 @@ require_relative './label'
 require_relative './genre'
 
 class MusicAlbum < Item
-  attr_accessor :title, :publisher, :on_spotify
+  attr_accessor :title, :on_spotify
 
-  def initialize(*args, publisher, on_spotify)
+  def initialize(*args, on_spotify: false)
     super(*args)
-    @publisher = publisher
     @on_spotify = on_spotify
   end
 
@@ -23,8 +22,7 @@ class MusicAlbum < Item
       'publish_date' => @publish_date,
       'archived' => @archived,
       'title' => @title,
-      'cover_state' => @cover_state,
-      'publisher' => @publisher,
+      'on_spotify' => @on_spotify,
       'label' => @label ? ['id' => @label.id, 'title' => @label.title, 'color' => @label.color] : nil,
       'author' => @author ? ['id' => @author.id, 'first_name' => @author.first_name, 'last_name' => author.last_name] : nil,
       'genre' => @genre ? ['id' => @genre.id, 'name' => @genre.name] : nil,

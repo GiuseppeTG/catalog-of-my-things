@@ -6,6 +6,8 @@ require_relative './label'
 require_relative './menu_label'
 require_relative './menu_book'
 require_relative './menu_music_album'
+require_relative './menu_genre'
+require_relative './genre'
 
 class App
   def initialize

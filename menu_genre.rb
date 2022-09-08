@@ -1,6 +1,6 @@
 class MenuGenre
   def genre_options(item, genres)
-    puts 'Do you want to add a genre to the book? [Y/N]'
+    puts 'Do you want to add a genre to this item? [Y/N]'
     answer = gets.chomp.upcase
     return if %w[N NO].include?(answer)
 
