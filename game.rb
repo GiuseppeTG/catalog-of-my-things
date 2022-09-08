@@ -36,7 +36,7 @@ class Game < Item
   end
 
   def can_be_archived?()
-      super && last_played_at > 1
+    super && last_played_at > 1
   end
 end
 

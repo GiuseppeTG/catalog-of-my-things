@@ -16,7 +16,7 @@ class MenuGame
     input_last_used = gets.chomp
 
     game = Game.new(input_title, input_publish_date, input_multiplayer, input_last_used)
-   
+
     if game.can_be_archived?
       puts 'Do you want to archive the game? [Y/N]'
       answer = gets.chomp.upcase
