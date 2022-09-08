@@ -31,7 +31,10 @@ class MusicAlbum < Item
   end
 
   def self.json_create(music_album)
-    new(music_album['id'], music_album['title'], music_album['publish_date'], music_album['on_spotify'],
-        music_album['label'], music_album['genre'], music_album['source'])
+    new(music_album['id'], music_album['publish_date'], music_album['archived'], music_album['title'],
+        music_album['on_spotify'], music_album['label'], music_album['author'], music_album['genre'], music_album['source'])
   end
 end
+
+# malb = MusicAlbum.new('test-book', '2000-21-31', true)
+# p malb

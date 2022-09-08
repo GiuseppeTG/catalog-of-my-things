@@ -19,6 +19,7 @@ class MenuMusicAlbum
     input_on_spotify = true if %w[Y YES].include?(answer)
 
     music_album = MusicAlbum.new(input_title, input_publish_date, input_on_spotify)
+    
     if music_album.can_be_archived?
       puts 'Do you want to archive the Music Album? [Y/N]'
       answer = gets.chomp.upcase

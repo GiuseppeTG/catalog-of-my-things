@@ -101,6 +101,65 @@
       "author_id": null,
       "genre_id": null,
       "source_id": null
+    },
+    {
+      "json_class": "MusicAlbum",
+      "id": true,
+      "publish_date": "2000-01-01",
+      "archived": true,
+      "title": "aaa",
+      "on_spotify": false,
+      "label": [
+        {
+          "id": 110283,
+          "title": "New",
+          "color": "Green"
+        }
+      ],
+      "author": null,
+      "genre": [
+        {
+          "id": 568759,
+          "name": "Rock"
+        }
+      ],
+      "source": null
+    },
+    {
+      "json_class": "MusicAlbum",
+      "id": true,
+      "publish_date": "2000-01-01",
+      "archived": true,
+      "title": "aaa",
+      "on_spotify": false,
+      "label": [
+        {
+          "id": 110283,
+          "title": "New",
+          "color": "Green"
+        }
+      ],
+      "author": null,
+      "genre": [
+        {
+          "id": 568759,
+          "name": "Rock"
+        }
+      ],
+      "source": null
+    },
+    {
+      "json_class": "Book",
+      "id": 913271,
+      "publish_date": "2000-01-01",
+      "archived": true,
+      "title": "book 1",
+      "cover_state": "bad",
+      "publisher": "abc",
+      "label_id": 110283,
+      "author_id": null,
+      "genre_id": null,
+      "source_id": null
     }
   ]
 }

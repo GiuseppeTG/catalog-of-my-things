@@ -30,6 +30,36 @@
           "source": null
         }
       ]
+    },
+    {
+      "json_class": "Genre",
+      "id": 568759,
+      "name": "Rock",
+      "items": [
+        {
+          "json_class": "MusicAlbum",
+          "id": true,
+          "publish_date": "2000-01-01",
+          "archived": true,
+          "title": "aaa",
+          "on_spotify": false,
+          "label": [
+            {
+              "id": 110283,
+              "title": "New",
+              "color": "Green"
+            }
+          ],
+          "author": null,
+          "genre": [
+            {
+              "id": 568759,
+              "name": "Rock"
+            }
+          ],
+          "source": null
+        }
+      ]
     }
   ]
 }
