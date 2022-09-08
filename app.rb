@@ -73,7 +73,7 @@ class App
       print "Author: #{book['author'][0]['first_name']} #{book['author'][0]['last_name']} " if book['author']
       print "Genre: #{book['genre'][0]['name']} " if book['genre']
       print "Label: #{book['label'][0]['title']} (#{book['label'][0]['color']}) " if book['label']
-      print "Source: #{book['source'][0]['name']} " if book['source']
+      print "Source: #{book['source'][0]['name']}" if book['source']
     end
     init
   end
