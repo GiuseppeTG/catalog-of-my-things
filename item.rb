@@ -5,8 +5,8 @@ class Item
   attr_accessor :publish_date
   attr_reader :id, :genre, :author, :label, :archived
 
-  def initialize(title, publish_date, id = nil)
-    @id = id || Random.rand(1..1_000_000)
+  def initialize(title, publish_date)
+    @id = Random.rand(1..1_000_000)
     @title = title
     @publish_date = publish_date
     @archived = false # by default, item archived is automatically set as false. It can be changed with method.

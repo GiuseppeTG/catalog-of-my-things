@@ -11,6 +11,18 @@
       "id": 53,
       "first_name": "Fernando",
       "last_name": "Silva"
+    },
+    {
+      "json_class": "Author",
+      "id": 40,
+      "first_name": "Waqar",
+      "last_name": "Khan"
+    },
+    {
+      "json_class": "Author",
+      "id": 73,
+      "first_name": "Waqasuth",
+      "last_name": "Ahmadno"
     }
   ]
 }

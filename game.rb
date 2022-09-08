@@ -5,10 +5,11 @@ require_relative './label'
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
 
-  def initialize(*args, last_played_at, multiplayer: false)
+  def initialize(*args, last_played_at, multiplayer)
     super(*args)
-    @multiplayer = multiplayer
     @last_played_at = last_played_at
+    @multiplayer = multiplayer
+    
   end
 
   # Convert game to json format
@@ -20,12 +21,13 @@ class Game < Item
       'title' => @title,
       'publish_date' => @publish_date,
       'archived' => @archived,
-      'label' => @label ? ['id' => @label.id, 'title' => @label.title, 'color' => @label.color] : nil,
+      'multiplayer' => @multiplayer,
+      'last_played_at' => @last_played_at,
       'author' => @author ? ['id' => @author.id, 'first_name' => @author.first_name, 'last_name' => author.last_name] : nil,
+      'label' => @label ? ['id' => @label.id, 'title' => @label.title, 'color' => @label.color] : nil,
       'genre' => @genre ? ['id' => @genre.id, 'name' => @genre.name] : nil,
       'source' => @source ? ['id' => @source.id, 'name' => @source.name] : nil,
-      'multiplayer' => @multiplayer,
-      'last_played_at' => @last_played_at
+     
     }.to_json(*args)
   end
 
@@ -36,10 +38,9 @@ class Game < Item
   end
 
   def can_be_archived?()
-    super(can_be_archived?) && last_played_at > 1
+    super && last_played_at > 1
   end
 end
 
-g1 = Game.new('crash', '2002-02-02', 'hello', true)
-p g1
-# Add title parameter to the game
+# g= Game.new('mytitle', 2022-3-2,  2, true)
+# p g

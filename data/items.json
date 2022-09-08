@@ -63,6 +63,82 @@
       "multiplayer": false,
       "last_played_at": true
     },
-    null
+    null,
+    {
+      "json_class": "Game",
+      "id": 1,
+      "title": "zeel2",
+      "publish_date": "2022-2-3",
+      "archived": false,
+      "multiplayer": false,
+      "last_played_at": true,
+      "author": [
+        {
+          "id": 40,
+          "first_name": "Waqar",
+          "last_name": "Khan"
+        }
+      ],
+      "label": null,
+      "genre": null,
+      "source": null
+    },
+    {
+      "json_class": "Book",
+      "id": 973778,
+      "publish_date": "2022-3-2",
+      "archived": false,
+      "title": "abcbook",
+      "cover_state": "dsf",
+      "publisher": "",
+      "label": [
+        {
+          "id": 780235,
+          "title": "D",
+          "color": "Fas"
+        }
+      ],
+      "author": null,
+      "genre": null,
+      "source": null
+    },
+    {
+      "json_class": "Game",
+      "id": 2,
+      "title": "abc",
+      "publish_date": "2022",
+      "archived": false,
+      "multiplayer": false,
+      "last_played_at": true,
+      "author": null,
+      "label": null,
+      "genre": null,
+      "source": null
+    },
+    {
+      "json_class": "Game",
+      "id": 92549,
+      "title": "abc",
+      "publish_date": "2022-3-2",
+      "archived": false,
+      "multiplayer": true,
+      "last_played_at": 3,
+      "author": [
+        {
+          "id": 73,
+          "first_name": "Waqasuth",
+          "last_name": "Ahmadno"
+        }
+      ],
+      "label": [
+        {
+          "id": 402846,
+          "title": "Abctitel",
+          "color": "Mycolor"
+        }
+      ],
+      "genre": null,
+      "source": null
+    }
   ]
 }

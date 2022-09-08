@@ -23,8 +23,10 @@ class MenuGame
     puts 'How much time ago it was last used? (no of years?)'
     input_last_used = gets.chomp.to_i
 
-    game = Game.new(input_title, input_publish_date, input_last_used, input_multiplayer)
+    #id =Random.rand(1..1_000_000)
 
+    game = Game.new(input_title, input_publish_date,input_last_used, input_multiplayer)
+    
     if game.can_be_archived?
       puts 'Do you want to archive the game? [Y/N]'
       answer = gets.chomp.upcase
