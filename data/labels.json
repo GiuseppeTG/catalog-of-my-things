@@ -2,40 +2,19 @@
   "labels": [
     {
       "json_class": "Label",
-      "id": 605424,
-      "title": "Qwer",
-      "color": "Rewq",
-      "items": [
-        {
-          "json_class": "Book",
-          "id": 142522,
-          "publish_date": "2002-02-02",
-          "archived": false,
-          "title": "qwer",
-          "cover_state": "bad",
-          "publisher": "qwer",
-          "label_id": 605424,
-          "author_id": null,
-          "genre_id": null,
-          "source_id": null
-        }
-      ]
-    },
-    {
-      "json_class": "Label",
-      "id": 490838,
+      "id": 479001,
       "title": "New",
       "color": "Green",
       "items": [
         {
           "json_class": "Book",
-          "id": 382124,
-          "publish_date": "2000-02-02",
+          "id": 119643,
+          "publish_date": "2002-02-02",
           "archived": false,
-          "title": "qwer",
-          "cover_state": "good",
-          "publisher": "uytui",
-          "label_id": 490838,
+          "title": "asdf",
+          "cover_state": "bad",
+          "publisher": "asdf",
+          "label_id": 479001,
           "author_id": null,
           "genre_id": null,
           "source_id": null
@@ -44,19 +23,19 @@
     },
     {
       "json_class": "Label",
-      "id": 862405,
-      "title": "Uuuuuu",
-      "color": "Red",
+      "id": 479001,
+      "title": "New",
+      "color": "Green",
       "items": [
         {
           "json_class": "Book",
-          "id": 240953,
-          "publish_date": "2022-02-02",
+          "id": 604357,
+          "publish_date": "2001-04-04",
           "archived": false,
           "title": "qwer",
           "cover_state": "bad",
-          "publisher": "woqeiu",
-          "label_id": 862405,
+          "publisher": "rtyu",
+          "label_id": 479001,
           "author_id": null,
           "genre_id": null,
           "source_id": null

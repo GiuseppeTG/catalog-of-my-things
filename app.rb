@@ -13,6 +13,7 @@ class App
     @authors = read_file('data/authors.json')['authors']
     @labels = read_file('data/labels.json')['labels']
     @sources = read_file('data/sources.json')['sources']
+    write_abc
   end
 
   def read_file(file_name)
@@ -26,25 +27,33 @@ class App
     run_option(option)
   end
 
-  def write_files
-    files = [
-
-      { name: 'items', data: @items },
-      { name: 'genres', data: @genres },
-      { name: 'authors', data: @authors },
-      { name: 'labels', data: @labels },
-      { name: 'sources', data: @sources }
-
-    ]
-
-    files.each do |file|
-      File.open("data/#{file[:name]}.json", 'w') do |f|
-        data_hash = { file[:name] => file[:data] }
-        json = JSON.pretty_generate(data_hash)
-        f.write(json)
-      end
+  def write_items
+    File.open('data/items.json', 'w') do |f|
+      data_hash = { 'items' => @items }
+      json = JSON.pretty_generate(data_hash)
+      f.write(json)
     end
   end
+
+  # def write_abc
+  #   files = [
+
+  #     { name: 'genres', data: @genres },
+  #     { name: 'authors', data: @authors },
+  #     { name: 'labels', data: @labels },
+  #     { name: 'sources', data: @sources }
+
+  #   ]
+
+  #   files.each do |file|
+  #     File.open("data/#{file[:name]}.json", 'w') do |f|
+  #       p file[:data]
+  #       data_hash = { file[:name] => file[:data] }
+  #       json = JSON.pretty_generate(data_hash)
+  #       f.write(json)
+  #     end
+  #   end
+  # end
 
   def run_option(option)
     case option
@@ -104,7 +113,7 @@ class App
     book = MenuBook.new.book_options
     MenuLabel.new.label_options(book, @labels)
     @items << book
-    write_files
+    write_items
     init
   end
 
@@ -128,6 +137,4 @@ class App
   end
 end
 
-b1 = Book.new('title', '2022-02-02', 1234, 'qrew', 'bad')
-p b1
 # rubocop:enable Metrics/CyclomaticComplexity
