@@ -1,3 +1,4 @@
+require_relative './author'
 class MenuAuthor
     def author_options(item, authors)
       puts 'Do you want to add an Author to the Item? [Y/N]'
