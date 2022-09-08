@@ -1,5 +1,5 @@
 class Source
-  attr_reader :items, :title, :publish_date
+  attr_reader :items, :name, :id
 
   def initialize(name, id = nil)
     @id = id || Random.rand(1..1_000_000)
