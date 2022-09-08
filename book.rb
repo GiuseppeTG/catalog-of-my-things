@@ -3,7 +3,7 @@ require_relative './item'
 require_relative './label'
 
 class Book < Item
-  attr_accessor :title, :publisher, :cover_state
+  attr_accessor :publisher, :cover_state
 
   def initialize(*args, publisher, cover_state)
     super(*args)

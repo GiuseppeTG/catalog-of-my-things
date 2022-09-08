@@ -2,15 +2,9 @@
   "labels": [
     {
       "json_class": "Label",
-      "id": 154863,
+      "id": 731192,
       "title": "New",
       "color": "Green"
-    },
-    {
-      "json_class": "Label",
-      "id": 76944,
-      "title": "Free",
-      "color": "Blue"
     }
   ]
 }
