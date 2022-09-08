@@ -1,0 +1,16 @@
+{
+  "labels": [
+    {
+      "json_class": "Label",
+      "id": 154863,
+      "title": "New",
+      "color": "Green"
+    },
+    {
+      "json_class": "Label",
+      "id": 76944,
+      "title": "Free",
+      "color": "Blue"
+    }
+  ]
+}
