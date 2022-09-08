@@ -38,6 +38,32 @@
       "author_id": null,
       "genre_id": null,
       "source_id": null
+    },
+    {
+      "json_class": "Book",
+      "id": 117575,
+      "publish_date": "2020-01-01",
+      "archived": true,
+      "title": "aa",
+      "cover_state": "bad",
+      "publisher": "asd",
+      "label_id": 742945,
+      "author_id": null,
+      "genre_id": null,
+      "source_id": null
+    },
+    {
+      "json_class": "Book",
+      "id": 325376,
+      "publish_date": "2015-01-01",
+      "archived": false,
+      "title": "the lord",
+      "cover_state": "good",
+      "publisher": "realbooks",
+      "label_id": 729919,
+      "author_id": null,
+      "genre_id": null,
+      "source_id": null
     }
   ]
 }

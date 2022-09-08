@@ -13,7 +13,7 @@ class MusicAlbum < Item
   end
 
   def can_be_archived?
-    super || (@on_spotify)
+    super || @on_spotify
   end
 
   def to_json(*args)
@@ -34,7 +34,6 @@ class MusicAlbum < Item
 
   def self.json_create(music_album)
     new(music_album['id'], music_album['title'], music_album['publish_date'], music_album['on_spotify'],
-        music_album['publisher'], music_album['author'], music_album['label'], music_album['genre'],
-        music_album['source'])
+        music_album['label'], music_album['genre'], music_album['source'])
   end
 end
