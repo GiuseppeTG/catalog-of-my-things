@@ -5,7 +5,7 @@ require_relative './label'
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
 
-  def initialize(*args, multiplayer, last_played_at)
+  def initialize(*args, last_played_at, multiplayer: false)
     super(*args)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
@@ -40,4 +40,6 @@ class Game < Item
   end
 end
 
+g1 = Game.new('crash', '2002-02-02', 'hello', true)
+p g1
 # Add title parameter to the game
