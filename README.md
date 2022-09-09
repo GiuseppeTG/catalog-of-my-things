@@ -10,6 +10,7 @@
 
 - Ruby
 - Json
+- Rspec
 
 ## Live Demo (coming soon...)
 
