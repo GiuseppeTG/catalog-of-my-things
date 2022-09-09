@@ -13,7 +13,7 @@ class MenuMovie
       print 'Wrong option, please enter [Y/N] '
       input_silent_state = gets.chomp.upcase
     end
-    silent_state = %w[N NO].include?(input_silent_state) ? false : true
+    silent_state = %w[Y YES].include?(input_silent_state)
 
     movie = Movie.new(input_title, input_publish_date, silent: silent_state)
     if movie.can_be_archived?
