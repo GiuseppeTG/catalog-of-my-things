@@ -11,8 +11,6 @@ class Game < Item
     @multiplayer = multiplayer
   end
 
-  # Convert game to json format
-
   def to_json(*args)
     {
       JSON.create_id => self.class.name,
