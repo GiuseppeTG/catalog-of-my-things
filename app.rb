@@ -99,6 +99,11 @@ class App
   
   def list_sources
     p 'List of sources'
+    @sources.each do |src|
+      puts "Name: #{src['name']}"
+    end
+    p 'Press any key to continue'
+    gets.chomp
     init
   end
 
