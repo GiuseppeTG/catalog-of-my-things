@@ -1,35 +1,3 @@
 {
-  "genres": [
-    {
-      "json_class": "Genre",
-      "id": 703317,
-      "name": "Pop",
-      "items": [
-        {
-          "json_class": "MusicAlbum",
-          "id": true,
-          "publish_date": "2022-10-10",
-          "archived": false,
-          "title": "asdf",
-          "cover_state": null,
-          "publisher": null,
-          "label": [
-            {
-              "id": 110283,
-              "title": "New",
-              "color": "Green"
-            }
-          ],
-          "author": null,
-          "genre": [
-            {
-              "id": 703317,
-              "name": "Pop"
-            }
-          ],
-          "source": null
-        }
-      ]
-    }
-  ]
+  "genres": []
 }
