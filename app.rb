@@ -62,15 +62,16 @@ class App
     when 0 then list_books
     when 1 then list_music_albums
     when 2 then list_games
-    when 3 then list_genres
-    when 4 then list_labels
-    when 5 then list_authors
-    when 6 then list_sources
-    when 7 then add_book
-    when 8 then add_music_album
-    when 9 then add_game
-    when 10 then add_movie
-    when 11 then quit_app
+    when 3 then list_movies
+    when 4 then list_genres
+    when 5 then list_labels
+    when 6 then list_authors
+    when 7 then list_sources
+    when 8 then add_book
+    when 9 then add_music_album
+    when 10 then add_game
+    when 11 then add_movie
+    when 12 then quit_app
     else p 'Please enter a valid option, number from 0 to 11'
          init
     end

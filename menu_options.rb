@@ -1,4 +1,6 @@
 # rubocop:disable Metrics/CyclomaticComplexity
+
+# This file need to be refactors.
 require_relative './app'
 class MenuOptions
   def run_option(option)
