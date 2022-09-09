@@ -84,11 +84,23 @@ class App
       print "Label: #{book['label'][0]['title']} (#{book['label'][0]['color']}) " if book['label']
       print "Source: #{book['source'][0]['name']}" if book['source']
     end
+    p 'Press any key to continue'
+    gets.chomp
     init
   end
 
   def list_music_albums
     p 'List of music albums'
+    music_albums = @items.select { |item| item['json_class'] == 'MusicAlbum' }
+    music_albums.each do |music_album|
+      print "Title: #{music_album['title']} "
+      print "Author: #{music_album['author'][0]['first_name']} #{music_album['author'][0]['last_name']} " if music_album['author']
+      print "Genre: #{music_album['genre'][0]['name']} " if music_album['genre']
+      print "Label: #{music_album['label'][0]['title']} (#{music_album['label'][0]['color']}) " if music_album['label']
+      print "Source: #{music_album['source'][0]['name']} " if music_album['source']
+    end
+    p 'Press any key to continue'
+    gets.chomp
     init
   end
 
@@ -104,11 +116,18 @@ class App
       print "Multiplayer: #{game['multiplayer']}" if game['multiplayer']
       print "Last Played: #{game['last_played']}" if game['last_played']
     end
+    p 'Press any key to continue'
+    gets.chomp
     init
   end
   
   def list_genres
     p 'List of genres'
+    @genres.each do |gen|
+      puts "Title: #{gen['name']} - Id: #{gen['id']}"
+    end
+    p 'Press any key to continue'
+    gets.chomp
     init
   end
   
@@ -117,7 +136,8 @@ class App
     @labels.each do |lab|
       puts "Title: #{lab['title']} - Color: #{lab['color']} - Id: #{lab['id']}"
     end
-
+    p 'Press any key to continue'
+    gets.chomp
     init
   end
   
@@ -126,7 +146,8 @@ class App
     @authors.each do |author|
       puts "First Name: #{author['first_name']} - Last Name: #{author['last_name']} - Id: #{author['id']}"
     end
-
+    p 'Press any key to continue'
+    gets.chomp
     init
   end
   
