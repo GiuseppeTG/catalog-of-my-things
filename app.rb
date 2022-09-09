@@ -100,6 +100,9 @@ class App
 
   def list_genres
     p 'List of genres'
+    @genres.each do |gen|
+      puts "Title: #{gen['title']} - Color: #{gen['color']} - Id: #{gen['id']}"
+    end
     init
   end
 
