@@ -5,6 +5,7 @@ require_relative './main_menu'
 require_relative './label'
 require_relative './menu_label'
 require_relative './menu_book'
+require_relative './menu_source'
 require_relative './menu_movie'
 
 class App
@@ -104,6 +105,7 @@ class App
   def add_book
     book = MenuBook.new.book_options
     MenuLabel.new.label_options(book, @labels)
+    MenuSource.new.label_options(book, @sources)
     @items << book
     write_files
     init
