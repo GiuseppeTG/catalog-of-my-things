@@ -78,30 +78,26 @@ class App
   end
 
   def list_books
-   
-    name='Book'
-    ListItems.new.print_items(name,@items)
+    name = 'Book'
+    ListItems.new.print_items(name, @items)
     init
   end
 
   def list_music_albums
-
-    name='MusicAlbum'
-    ListItems.new.print_items(name,@items)
-    
+    name = 'MusicAlbum'
+    ListItems.new.print_items(name, @items)
     init
   end
 
   def list_games
-    name='Game'
-    ListItems.new.print_items(name,@items)
+    name = 'Game'
+    ListItems.new.print_items(name, @items)
     init
   end
 
   def list_movies
-    name='Movie'
-    ListItems.new.print_items(name,@items)
-    init 
+    name = 'Movie'
+    ListItems.new.print_items(name, @items)
     init
   end
 
