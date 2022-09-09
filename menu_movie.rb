@@ -11,7 +11,7 @@ class MenuMovie
     input_silent_state = gets.chomp.upcase
     until %w[Y YES N NO].include?(answer)
       print 'Wrong option, please enter [Y/N] '
-      answer = gets.chomp.upcase
+      input_silent_state = gets.chomp.upcase
     end
     silent_state = %w[N NO].include?(input_silent_state) ? false : true
 
