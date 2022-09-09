@@ -1,3 +1,5 @@
+require 'json'
+
 class Source
   attr_reader :items, :name, :id
 
@@ -10,5 +12,17 @@ class Source
   def add_item(item)
     @items << item
     item.add_source(self)
+  end
+
+  def to_json(*args)
+    {
+      JSON.create_id => self.class.name,
+      'id' => @id,
+      'name' => @name
+    }.to_json(*args)
+  end
+
+  def self.json_create(_source)
+    new(source['id'], source['title'], source['color'], source['items'])
   end
 end

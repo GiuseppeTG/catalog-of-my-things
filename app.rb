@@ -7,6 +7,8 @@ require_relative './menu_game'
 require_relative './menu_author'
 require_relative './menu_music_album'
 require_relative './menu_genre'
+require_relative './menu_source'
+require_relative './menu_movie'
 require_relative './book'
 require_relative './label'
 require_relative './game'
@@ -151,6 +153,24 @@ class App
 
   def list_sources
     p 'List of sources'
+    @sources.each do |src|
+      puts "Name: #{src['name']}"
+    end
+    p 'Press any key to continue'
+    gets.chomp
+    init
+  end
+
+  def list_movies
+    p 'List of movies'
+    movies = @items.select { |item| item['json_class'] == 'Movie' }
+    movies.each do |movie|
+      print "Title: #{movie['title']} "
+      print "Author: #{movie['author'][0]['first_name']} #{movie['author'][0]['last_name']} " if movie['author']
+      print "Genre: #{movie['genre'][0]['name']} " if movie['genre']
+      print "Label: #{movie['label'][0]['title']} (#{movie['label'][0]['color']}) " if movie['label']
+      print "Movie: #{movie['movie'][0]['name']}" if movie['movie']
+    end
     p 'Press any key to continue'
     gets.chomp
     init
@@ -159,6 +179,7 @@ class App
   def add_book
     book = MenuBook.new.book_options
     MenuLabel.new.label_options(book, @labels)
+    MenuSource.new.label_options(book, @sources)
     @items << book
     write_files
     init
@@ -184,6 +205,10 @@ class App
 
   def add_movie
     p 'Adding a movie...'
+    movie = MenuMovie.new.Movie_options
+    MenuMovie.new.label_options(movie, @labels)
+    @items << movie
+    write_files
     init
   end
 
