@@ -9,7 +9,7 @@ class Game < Item
     super(*args)
     @last_played_at = last_played_at
     @multiplayer = multiplayer
-    
+
   end
 
   # Convert game to json format
@@ -27,7 +27,7 @@ class Game < Item
       'label' => @label ? ['id' => @label.id, 'title' => @label.title, 'color' => @label.color] : nil,
       'genre' => @genre ? ['id' => @genre.id, 'name' => @genre.name] : nil,
       'source' => @source ? ['id' => @source.id, 'name' => @source.name] : nil,
-     
+
     }.to_json(*args)
   end
 
@@ -41,3 +41,6 @@ class Game < Item
     super && last_played_at > 1
   end
 end
+
+game = Game.new('title', '2000-12-24', 1, true)
+p game
