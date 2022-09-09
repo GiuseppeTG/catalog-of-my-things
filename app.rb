@@ -107,6 +107,21 @@ class App
     init
   end
 
+  def list_movies
+    p 'List of movies'
+    movies = @items.select { |item| item['json_class'] == 'Movie' }
+    movies.each do |movie|
+      print "Title: #{movie['title']} "
+      print "Author: #{movie['author'][0]['first_name']} #{movie['author'][0]['last_name']} " if movie['author']
+      print "Genre: #{movie['genre'][0]['name']} " if movie['genre']
+      print "Label: #{movie['label'][0]['title']} (#{movie['label'][0]['color']}) " if movie['label']
+      print "Movie: #{movie['movie'][0]['name']}" if movie['movie']
+    end
+    p 'Press any key to continue'
+    gets.chomp
+    init
+  end
+
   def add_book
     book = MenuBook.new.book_options
     MenuLabel.new.label_options(book, @labels)
