@@ -2,23 +2,13 @@
   "sources": [
     {
       "json_class": "Source",
-      "id": 303648,
-      "name": "Ldfls"
+      "id": 440913,
+      "name": "Source name"
     },
     {
       "json_class": "Source",
-      "id": 265759,
-      "name": "Dfd"
-    },
-    {
-      "json_class": "Source",
-      "id": 741983,
-      "name": "Jsadhf"
-    },
-    {
-      "json_class": "Source",
-      "id": 619865,
-      "name": "Abcsouce"
+      "id": 674921,
+      "name": "Sourcename"
     }
   ]
 }

@@ -2,45 +2,50 @@
   "genres": [
     {
       "json_class": "Genre",
-      "id": 280024,
-      "name": "Rock",
+      "id": 39414,
+      "name": "Genre name",
       "items": [
         {
           "json_class": "Book",
-          "id": 877185,
-          "publish_date": "2002-01-01",
+          "id": 295053,
+          "publish_date": "2002-02-02",
           "archived": true,
-          "title": "erty",
+          "title": "Title 1",
           "cover_state": "bad",
-          "publisher": "abc",
+          "publisher": "publisher 1",
           "label": [
             {
-              "id": 363450,
-              "title": "Qwer",
+              "id": 764025,
+              "title": "Label",
               "color": "Red"
             }
           ],
           "author": [
             {
-              "id": 12,
-              "first_name": "Fernando",
-              "last_name": "Silva"
+              "id": 69,
+              "first_name": "Giuseppe",
+              "last_name": "Tomasini"
             }
           ],
           "genre": [
             {
-              "id": 280024,
-              "name": "Rock"
+              "id": 39414,
+              "name": "Genre name"
             }
           ],
           "source": [
             {
-              "id": 741983,
-              "name": "Jsadhf"
+              "id": 440913,
+              "name": "Source name"
             }
           ]
         }
       ]
+    },
+    {
+      "json_class": "Genre",
+      "id": 440447,
+      "name": "A genre"
     }
   ]
 }

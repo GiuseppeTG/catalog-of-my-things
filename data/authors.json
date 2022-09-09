@@ -2,13 +2,13 @@
   "authors": [
     {
       "json_class": "Author",
-      "id": 10,
-      "first_name": "Ddff",
-      "last_name": "Dfd"
+      "id": 69,
+      "first_name": "Giuseppe",
+      "last_name": "Tomasini"
     },
     {
       "json_class": "Author",
-      "id": 12,
+      "id": 81,
       "first_name": "Fernando",
       "last_name": "Silva"
     }

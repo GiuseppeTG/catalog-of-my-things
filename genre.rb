@@ -17,12 +17,11 @@ class Genre
     {
       JSON.create_id => self.class.name,
       'id' => @id,
-      'name' => @name,
-      'items' => @items
+      'name' => @name
     }.to_json(*args)
   end
 
   def self.json_create(_genre)
-    new(genre['id'], genre['name'], genre['items'])
+    new(genre['id'], genre['name'])
   end
 end

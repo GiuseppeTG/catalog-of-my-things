@@ -1,94 +1,79 @@
 {
   "items": [
     {
-      "json_class": "Movie",
-      "id": 102223,
-      "publish_date": "2020-10-10",
-      "archived": true,
-      "title": "slskdls",
-      "label": null,
-      "author": null,
-      "genre": null,
-      "source": [
-        {
-          "id": 303648,
-          "name": "Ldfls"
-        }
-      ]
-    },
-    {
-      "json_class": "Movie",
-      "id": 860160,
-      "publish_date": "2020-10-10",
-      "archived": false,
-      "title": "sdsd",
-      "label": null,
-      "author": [
-        {
-          "id": 10,
-          "first_name": "Ddff",
-          "last_name": "Dfd"
-        }
-      ],
-      "genre": null,
-      "source": [
-        {
-          "id": 265759,
-          "name": "Dfd"
-        }
-      ]
-    },
-    {
       "json_class": "Book",
-      "id": 877185,
-      "publish_date": "2002-01-01",
+      "id": 295053,
+      "publish_date": "2002-02-02",
       "archived": true,
-      "title": "erty",
+      "title": "Title 1",
       "cover_state": "bad",
-      "publisher": "abc",
+      "publisher": "publisher 1",
       "label": [
         {
-          "id": 363450,
-          "title": "Qwer",
+          "id": 764025,
+          "title": "Label",
           "color": "Red"
         }
       ],
       "author": [
         {
-          "id": 12,
-          "first_name": "Fernando",
-          "last_name": "Silva"
+          "id": 69,
+          "first_name": "Giuseppe",
+          "last_name": "Tomasini"
         }
       ],
       "genre": [
         {
-          "id": 280024,
-          "name": "Rock"
+          "id": 39414,
+          "name": "Genre name"
         }
       ],
       "source": [
         {
-          "id": 741983,
-          "name": "Jsadhf"
+          "id": 440913,
+          "name": "Source name"
         }
       ]
     },
     {
       "json_class": "MusicAlbum",
-      "id": 729535,
-      "publish_date": "2022-02-02",
-      "archived": false,
-      "title": "abcmusc",
-      "on_spotify": false,
+      "id": 445162,
+      "publish_date": "2001-01-01",
+      "archived": true,
+      "title": "title ",
+      "on_spotify": true,
       "label": null,
-      "author": null,
+      "author": [
+        {
+          "id": 81,
+          "first_name": "Fernando",
+          "last_name": "Silva"
+        }
+      ],
       "genre": null,
       "source": [
         {
-          "id": 619865,
-          "name": "Abcsouce"
+          "id": 674921,
+          "name": "Sourcename"
         }
       ]
+    },
+    {
+      "json_class": "MusicAlbum",
+      "id": 19733,
+      "publish_date": "2002-02-02",
+      "archived": true,
+      "title": "title",
+      "on_spotify": false,
+      "label": null,
+      "author": null,
+      "genre": [
+        {
+          "id": 440447,
+          "name": "A genre"
+        }
+      ],
+      "source": null
     }
   ]
 }
