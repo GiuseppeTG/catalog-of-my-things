@@ -3,7 +3,7 @@ require_relative '../music_album'
 require_relative '../label'
 
 describe 'music_album class' do
-  music_album = MusicAlbum.new('the wall', true)
+  music_album = MusicAlbum.new('the wall', '1977-01-01')
   label = Label.new('new', 'green')
   it 'Has an id' do
     expect(music_album.id).to be_truthy
