@@ -1,59 +1,21 @@
 {
   "items": [
     {
-      "json_class": "Book",
-      "id": 541517,
-      "publish_date": "2002-06-06",
+      "json_class": "Game",
+      "id": 17798,
+      "title": "mytitle",
+      "publish_date": "2022-3-2",
       "archived": false,
-      "title": "yyyyrtt",
-      "cover_state": "bad",
-      "publisher": "opop",
-      "label": [
+      "multiplayer": true,
+      "last_played_at": 1,
+      "author": [
         {
-          "id": 154863,
-          "title": "New",
-          "color": "Green"
+          "id": 67,
+          "first_name": "Waas",
+          "last_name": "Ahmad"
         }
       ],
-      "author_id": null,
-      "genre_id": null,
-      "source_id": null
-    },
-    {
-      "json_class": "Book",
-      "id": 19735,
-      "publish_date": "2001-08-08",
-      "archived": false,
-      "title": "tttt",
-      "cover_state": "good",
-      "publisher": "gonzalo",
-      "label": [
-        {
-          "id": 154863,
-          "title": "New",
-          "color": "Green"
-        }
-      ],
-      "author_id": null,
-      "genre_id": null,
-      "source_id": null
-    },
-    {
-      "json_class": "Book",
-      "id": 995394,
-      "publish_date": "2012-12-12",
-      "archived": true,
-      "title": "title1",
-      "cover_state": "bad",
-      "publisher": "juan",
-      "label": [
-        {
-          "id": 76944,
-          "title": "Free",
-          "color": "Blue"
-        }
-      ],
-      "author": null,
+      "label": null,
       "genre": null,
       "source": null
     }
