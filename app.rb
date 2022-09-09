@@ -9,6 +9,7 @@ require_relative './menu_music_album'
 require_relative './menu_genre'
 require_relative './menu_source'
 require_relative './menu_movie'
+require_relative './add_details'
 require_relative './book'
 require_relative './label'
 require_relative './game'
@@ -113,8 +114,6 @@ class App
       print "Genre: #{game['genre'][0]['name']} " if game['genre']
       print "Label: #{game['label'][0]['title']} (#{game['label'][0]['color']}) " if game['label']
       print "Source: #{game['source'][0]['name']}" if game['source']
-      print "Multiplayer: #{game['multiplayer']}" if game['multiplayer']
-      print "Last Played: #{game['last_played']}" if game['last_played']
     end
     p 'Press any key to continue'
     gets.chomp
@@ -178,10 +177,7 @@ class App
 
   def add_book
     book = MenuBook.new.book_options
-    MenuLabel.new.label_options(book, @labels)
-    MenuGenre.new.genre_options(book, @genres)
-    MenuAuthor.new.author_options(book, @authors)
-    MenuSource.new.source_options(book, @sources)
+    Details.new.details_options(book, @labels, @genres, @authors, @sources)
     @items << book
     write_files
     init
@@ -189,10 +185,7 @@ class App
 
   def add_music_album
     music_album = MenuMusicAlbum.new.music_album_options
-    MenuLabel.new.label_options(music_album, @labels)
-    MenuGenre.new.genre_options(music_album, @genres)
-    MenuAuthor.new.author_options(music_album, @authors)
-    MenuSource.new.source_options(music_album, @sources)
+    Details.new.details_options(book, @labels, @genres, @authors, @sources)
     @items << music_album
     write_files
     init
@@ -200,10 +193,7 @@ class App
 
   def add_game
     game = MenuGame.new.game_options
-    MenuSource.new.source_options(game, @sources)
-    MenuAuthor.new.author_options(game, @authors)
-    MenuGenre.new.genre_options(game, @genres)
-    MenuLabel.new.label_options(game, @labels)
+    Details.new.details_options(book, @labels, @genres, @authors, @sources)
     @items << game
     write_files
     init
@@ -212,10 +202,7 @@ class App
   def add_movie
     p 'Adding a movie...'
     movie = MenuMovie.new.movie_options
-    MenuSource.new.source_options(movie, @sources)
-    MenuAuthor.new.author_options(movie, @authors)
-    MenuGenre.new.genre_options(movie, @genres)
-    MenuLabel.new.label_options(movie, @labels)
+    Details.new.details_options(book, @labels, @genres, @authors, @sources)
     @items << movie
     write_files
     init

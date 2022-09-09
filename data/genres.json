@@ -1,5 +1,46 @@
 {
   "genres": [
-
+    {
+      "json_class": "Genre",
+      "id": 280024,
+      "name": "Rock",
+      "items": [
+        {
+          "json_class": "Book",
+          "id": 877185,
+          "publish_date": "2002-01-01",
+          "archived": true,
+          "title": "erty",
+          "cover_state": "bad",
+          "publisher": "abc",
+          "label": [
+            {
+              "id": 363450,
+              "title": "Qwer",
+              "color": "Red"
+            }
+          ],
+          "author": [
+            {
+              "id": 12,
+              "first_name": "Fernando",
+              "last_name": "Silva"
+            }
+          ],
+          "genre": [
+            {
+              "id": 280024,
+              "name": "Rock"
+            }
+          ],
+          "source": [
+            {
+              "id": 741983,
+              "name": "Jsadhf"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

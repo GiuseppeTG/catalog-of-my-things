@@ -1,5 +1,10 @@
 {
   "labels": [
-
+    {
+      "json_class": "Label",
+      "id": 363450,
+      "title": "Qwer",
+      "color": "Red"
+    }
   ]
 }
