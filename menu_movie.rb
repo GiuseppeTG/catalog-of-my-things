@@ -18,7 +18,7 @@ class MenuMovie
 
     movie = Movie.new(input_title, input_publish_date, silent: silent_state)
     if movie.can_be_archived?
-      puts 'Do you want to archive the book? [Y/N]'
+      puts 'Do you want to archive the movie? [Y/N]'
       answer = gets.chomp.upcase
       movie if %w[N NO].include?(answer)
 

@@ -166,7 +166,6 @@ class App
   end
 
   def add_movie
-    p 'Adding a movie...'
     movie = MenuMovie.new.movie_options
     Details.new.details_options(movie, @labels, @genres, @authors, @sources)
     @items << movie
