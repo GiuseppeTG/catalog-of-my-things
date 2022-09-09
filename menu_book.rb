@@ -15,7 +15,7 @@ class MenuBook
     if book.can_be_archived?
       puts 'Do you want to archive the book? [Y/N]'
       answer = gets.chomp.upcase
-      return if %w[N NO].include?(answer)
+      book if %w[N NO].include?(answer)
 
       until %w[Y YES N NO].include?(answer)
         print 'Wrong option, please enter [Y/N] '
