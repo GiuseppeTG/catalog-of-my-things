@@ -1,14 +1,3 @@
 {
-  "sources": [
-    {
-      "json_class": "Source",
-      "id": 440913,
-      "name": "Source name"
-    },
-    {
-      "json_class": "Source",
-      "id": 674921,
-      "name": "Sourcename"
-    }
-  ]
+  "sources": []
 }
