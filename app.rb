@@ -117,7 +117,11 @@ class App
   end
 
   def list_authors
-    p 'List of authors'
+    p 'List of Authors'
+    @authors.each do |author|
+      puts "First Name: #{author['first_name']} - Last Name: #{author['last_name']} - Id: #{author['id']}"
+    end
+
     init
   end
 
@@ -140,7 +144,11 @@ class App
   end
 
   def add_game
-    p 'Adding a game...'
+    game = MenuGame.new.game_options
+    MenuLabel.new.label_options(game, @labels)
+    MenuAuthor.new.author_options(game, @authors)
+    @items << game
+    write_files
     init
   end
 
