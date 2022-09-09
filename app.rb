@@ -5,6 +5,10 @@ require_relative './main_menu'
 require_relative './label'
 require_relative './menu_label'
 require_relative './menu_book'
+require_relative './game'
+require_relative './author'
+require_relative './menu_game'
+require_relative './menu_author'
 
 class App
   def initialize
@@ -85,6 +89,16 @@ class App
 
   def list_games
     p 'List of games'
+    games = @items.select { |item| item['json_class'] == 'Game' }
+    games.each do |game|
+      print "Title: #{game['title']} "
+      print "Author: #{game['author'][0]['first_name']} #{game['author'][0]['last_name']} " if game['author']
+      print "Genre: #{game['genre'][0]['name']} " if game['genre']
+      print "Label: #{game['label'][0]['title']} (#{game['label'][0]['color']}) " if game['label']
+      print "Source: #{game['source'][0]['name']}" if game['source']
+      print "Multiplayer: #{game['multiplayer']}" if game['multiplayer']
+      print "Last Played: #{game['last_played']}" if game['last_played']
+    end
     init
   end
 
