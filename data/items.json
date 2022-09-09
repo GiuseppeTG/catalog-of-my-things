@@ -1,3 +1,27 @@
 {
-  "items": []
+  "items": [
+    {
+      "json_class": "MusicAlbum",
+      "id": 525706,
+      "publish_date": "1977-01-01",
+      "archived": true,
+      "title": "the wall",
+      "on_spotify": true,
+      "label": [
+        {
+          "id": 243243,
+          "title": "New",
+          "color": "Green"
+        }
+      ],
+      "author": null,
+      "genre": [
+        {
+          "id": 41928,
+          "name": "Rock"
+        }
+      ],
+      "source": null
+    }
+  ]
 }
