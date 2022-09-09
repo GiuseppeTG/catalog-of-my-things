@@ -1,15 +1,15 @@
 require 'rspec'
-require_relative '../book'
-require_relative '../label'
+require_relative '../game'
+require_relative '../author'
 
-describe 'Label class' do
-  book = Book.new('1984', '2000-12-24', 'someone', 'bad')
-  label = Label.new('new', 'green')
+describe 'Author class' do
+  game = Game.new('game_title', '2022-12-24', 1, true)
+  author = Author.new('Waqas', 'Ahmad')
   it 'Has an id' do
-    expect(label.id).to be_truthy
+    expect(author.id).to be_truthy
   end
   it 'Has an item' do
-    label.add_item(book)
-    expect(label.items[0]).to be(book)
+    author.add_item(game)
+    expect(author.items[0]).to be(game)
   end
 end
