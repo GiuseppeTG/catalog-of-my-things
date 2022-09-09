@@ -1,14 +1,17 @@
 # rubocop:disable Metrics/CyclomaticComplexity
 require 'json'
-require_relative './book'
-require_relative './main_menu'
-require_relative './label'
 require_relative './menu_label'
 require_relative './menu_book'
-require_relative './game'
-require_relative './author'
+require_relative './main_menu'
 require_relative './menu_game'
 require_relative './menu_author'
+require_relative './menu_music_album'
+require_relative './menu_genre'
+require_relative './book'
+require_relative './label'
+require_relative './game'
+require_relative './author'
+require_relative './genre'
 
 class App
   def initialize
@@ -139,7 +142,11 @@ class App
   end
 
   def add_music_album
-    p 'Adding a music album...'
+    music_album = MenuMusicAlbum.new.music_album_options
+    MenuLabel.new.label_options(music_album, @labels)
+    MenuGenre.new.genre_options(music_album, @genres)
+    @items << music_album
+    write_files
     init
   end
 
