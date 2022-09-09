@@ -8,7 +8,7 @@ class MenuSource
     new_source = if source
                    Source.new(source['name'], source['id'])
                  else
-                   Label.new(input_source_name)
+                   Source.new(input_source_name)
                  end
     item.add_source(new_source)
     sources << new_source unless source

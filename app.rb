@@ -179,7 +179,9 @@ class App
   def add_book
     book = MenuBook.new.book_options
     MenuLabel.new.label_options(book, @labels)
-    MenuSource.new.label_options(book, @sources)
+    MenuGenre.new.genre_options(book, @genres)
+    MenuAuthor.new.author_options(book, @authors)
+    MenuSource.new.source_options(book, @sources)
     @items << book
     write_files
     init
@@ -189,6 +191,8 @@ class App
     music_album = MenuMusicAlbum.new.music_album_options
     MenuLabel.new.label_options(music_album, @labels)
     MenuGenre.new.genre_options(music_album, @genres)
+    MenuAuthor.new.author_options(music_album, @authors)
+    MenuSource.new.source_options(music_album, @sources)
     @items << music_album
     write_files
     init
@@ -196,8 +200,10 @@ class App
 
   def add_game
     game = MenuGame.new.game_options
-    MenuLabel.new.label_options(game, @labels)
+    MenuSource.new.source_options(game, @sources)
     MenuAuthor.new.author_options(game, @authors)
+    MenuGenre.new.genre_options(game, @genres)
+    MenuLabel.new.label_options(game, @labels)
     @items << game
     write_files
     init
@@ -205,8 +211,11 @@ class App
 
   def add_movie
     p 'Adding a movie...'
-    movie = MenuMovie.new.Movie_options
-    MenuMovie.new.label_options(movie, @labels)
+    movie = MenuMovie.new.movie_options
+    MenuSource.new.source_options(movie, @sources)
+    MenuAuthor.new.author_options(movie, @authors)
+    MenuGenre.new.genre_options(movie, @genres)
+    MenuLabel.new.label_options(movie, @labels)
     @items << movie
     write_files
     init

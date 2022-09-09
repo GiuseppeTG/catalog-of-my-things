@@ -1,3 +1,14 @@
 {
-  "sources": []
+  "sources": [
+    {
+      "json_class": "Source",
+      "id": 303648,
+      "name": "Ldfls"
+    },
+    {
+      "json_class": "Source",
+      "id": 265759,
+      "name": "Dfd"
+    }
+  ]
 }

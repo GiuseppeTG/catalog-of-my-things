@@ -1,3 +1,10 @@
 {
-  "authors": []
+  "authors": [
+    {
+      "json_class": "Author",
+      "id": 10,
+      "first_name": "Ddff",
+      "last_name": "Dfd"
+    }
+  ]
 }

@@ -1,4 +1,5 @@
 require_relative './source'
+require_relative './movie'
 
 class MenuMovie
   def movie_options
@@ -9,7 +10,7 @@ class MenuMovie
     input_publish_date = gets.chomp
     puts 'Is the movie silent? [Y/N]'
     input_silent_state = gets.chomp.upcase
-    until %w[Y YES N NO].include?(answer)
+    until %w[Y YES N NO].include?(input_silent_state)
       print 'Wrong option, please enter [Y/N] '
       input_silent_state = gets.chomp.upcase
     end
@@ -19,7 +20,7 @@ class MenuMovie
     if movie.can_be_archived?
       puts 'Do you want to archive the book? [Y/N]'
       answer = gets.chomp.upcase
-      return if %w[N NO].include?(answer)
+      movie if %w[N NO].include?(answer)
 
       until %w[Y YES N NO].include?(answer)
         print 'Wrong option, please enter [Y/N] '
