@@ -120,7 +120,7 @@ class App
     gets.chomp
     init
   end
-  
+
   def list_genres
     p 'List of genres'
     @genres.each do |gen|
@@ -130,7 +130,7 @@ class App
     gets.chomp
     init
   end
-  
+
   def list_labels
     p 'List of labels'
     @labels.each do |lab|
@@ -140,7 +140,7 @@ class App
     gets.chomp
     init
   end
-  
+
   def list_authors
     p 'List of Authors'
     @authors.each do |author|
@@ -150,7 +150,7 @@ class App
     gets.chomp
     init
   end
-  
+
   def list_sources
     p 'List of sources'
     @sources.each do |src|
@@ -193,7 +193,7 @@ class App
     write_files
     init
   end
-  
+
   def add_game
     game = MenuGame.new.game_options
     MenuLabel.new.label_options(game, @labels)
@@ -202,7 +202,7 @@ class App
     write_files
     init
   end
-  
+
   def add_movie
     p 'Adding a movie...'
     movie = MenuMovie.new.Movie_options
