@@ -5,6 +5,7 @@ require_relative './main_menu'
 require_relative './label'
 require_relative './menu_label'
 require_relative './menu_book'
+require_relative './menu_movie'
 
 class App
   def initialize
@@ -79,22 +80,22 @@ class App
     p 'List of games'
     init
   end
-
+  
   def list_genres
     p 'List of genres'
     init
   end
-
+  
   def list_labels
     p 'List of labels'
     init
   end
-
+  
   def list_authors
     p 'List of authors'
     init
   end
-
+  
   def list_sources
     p 'List of sources'
     init
@@ -112,14 +113,18 @@ class App
     p 'Adding a music album...'
     init
   end
-
+  
   def add_game
     p 'Adding a game...'
     init
   end
-
+  
   def add_movie
     p 'Adding a movie...'
+    movie = MenuMovie.new.Movie_options
+    MenuMovie.new.label_options(movie, @labels)
+    @items << movie
+    write_files
     init
   end
 
@@ -128,6 +133,4 @@ class App
   end
 end
 
-b1 = Book.new('title', '2022-02-02', 1234, 'qrew', 'bad')
-p b1
 # rubocop:enable Metrics/CyclomaticComplexity
