@@ -10,6 +10,7 @@ require_relative './menu_genre'
 require_relative './menu_source'
 require_relative './menu_movie'
 require_relative './add_details'
+require_relative './list_items'
 require_relative './book'
 require_relative './label'
 require_relative './game'
@@ -76,47 +77,30 @@ class App
   end
 
   def list_books
-    p 'List of books'
-    books = @items.select { |item| item['json_class'] == 'Book' }
-    books.each do |book|
-      print "Title: #{book['title']} "
-      print "Author: #{book['author'][0]['first_name']} #{book['author'][0]['last_name']} " if book['author']
-      print "Genre: #{book['genre'][0]['name']} " if book['genre']
-      print "Label: #{book['label'][0]['title']} (#{book['label'][0]['color']}) " if book['label']
-      print "Source: #{book['source'][0]['name']}" if book['source']
-    end
-    p 'Press any key to continue'
-    gets.chomp
+   
+    name='Book'
+    ListItems.new.print_items(name,@items)
     init
   end
 
   def list_music_albums
-    p 'List of music albums'
-    music_albums = @items.select { |item| item['json_class'] == 'MusicAlbum' }
-    music_albums.each do |music_album|
-      print "Title: #{music_album['title']} "
-      print "Author: #{music_album['author'][0]['first_name']} #{music_album['author'][0]['last_name']} " if music_album['author']
-      print "Genre: #{music_album['genre'][0]['name']} " if music_album['genre']
-      print "Label: #{music_album['label'][0]['title']} (#{music_album['label'][0]['color']}) " if music_album['label']
-      print "Source: #{music_album['source'][0]['name']} " if music_album['source']
-    end
-    p 'Press any key to continue'
-    gets.chomp
+
+    name='MusicAlbum'
+    ListItems.new.print_items(name,@items)
+    
     init
   end
 
   def list_games
-    p 'List of games'
-    games = @items.select { |item| item['json_class'] == 'Game' }
-    games.each do |game|
-      print "Title: #{game['title']} "
-      print "Author: #{game['author'][0]['first_name']} #{game['author'][0]['last_name']} " if game['author']
-      print "Genre: #{game['genre'][0]['name']} " if game['genre']
-      print "Label: #{game['label'][0]['title']} (#{game['label'][0]['color']}) " if game['label']
-      print "Source: #{game['source'][0]['name']}" if game['source']
-    end
-    p 'Press any key to continue'
-    gets.chomp
+    name='Game'
+    ListItems.new.print_items(name,@items)
+    init
+  end
+
+  def list_movies
+    name='Movie'
+    ListItems.new.print_items(name,@items)
+    init 
     init
   end
 
@@ -160,21 +144,6 @@ class App
     init
   end
 
-  def list_movies
-    p 'List of movies'
-    movies = @items.select { |item| item['json_class'] == 'Movie' }
-    movies.each do |movie|
-      print "Title: #{movie['title']} "
-      print "Author: #{movie['author'][0]['first_name']} #{movie['author'][0]['last_name']} " if movie['author']
-      print "Genre: #{movie['genre'][0]['name']} " if movie['genre']
-      print "Label: #{movie['label'][0]['title']} (#{movie['label'][0]['color']}) " if movie['label']
-      print "Movie: #{movie['movie'][0]['name']}" if movie['movie']
-    end
-    p 'Press any key to continue'
-    gets.chomp
-    init
-  end
-
   def add_book
     book = MenuBook.new.book_options
     Details.new.details_options(book, @labels, @genres, @authors, @sources)
@@ -185,7 +154,7 @@ class App
 
   def add_music_album
     music_album = MenuMusicAlbum.new.music_album_options
-    Details.new.details_options(book, @labels, @genres, @authors, @sources)
+    Details.new.details_options(music_album, @labels, @genres, @authors, @sources)
     @items << music_album
     write_files
     init
@@ -193,7 +162,7 @@ class App
 
   def add_game
     game = MenuGame.new.game_options
-    Details.new.details_options(book, @labels, @genres, @authors, @sources)
+    Details.new.details_options(game, @labels, @genres, @authors, @sources)
     @items << game
     write_files
     init
@@ -202,7 +171,7 @@ class App
   def add_movie
     p 'Adding a movie...'
     movie = MenuMovie.new.movie_options
-    Details.new.details_options(book, @labels, @genres, @authors, @sources)
+    Details.new.details_options(movie, @labels, @genres, @authors, @sources)
     @items << movie
     write_files
     init

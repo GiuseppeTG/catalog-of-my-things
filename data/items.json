@@ -72,6 +72,23 @@
           "name": "Jsadhf"
         }
       ]
+    },
+    {
+      "json_class": "MusicAlbum",
+      "id": 729535,
+      "publish_date": "2022-02-02",
+      "archived": false,
+      "title": "abcmusc",
+      "on_spotify": false,
+      "label": null,
+      "author": null,
+      "genre": null,
+      "source": [
+        {
+          "id": 619865,
+          "name": "Abcsouce"
+        }
+      ]
     }
   ]
 }
