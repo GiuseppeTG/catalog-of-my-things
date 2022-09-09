@@ -5,6 +5,39 @@
       "id": 731192,
       "title": "New",
       "color": "Green"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "json_class": "Label",
+      "id": 76944,
+      "title": "Free",
+      "color": "Blue"
+    },
+    {
+      "json_class": "Label",
+      "id": 213272,
+      "title": "Jerry_label",
+      "color": "Cyan"
+    },
+    {
+      "json_class": "Label",
+      "id": 601975,
+      "title": "Igititle",
+      "color": "Idigo"
+    },
+    {
+      "json_class": "Label",
+      "id": 780235,
+      "title": "D",
+      "color": "Fas"
+    },
+    {
+      "json_class": "Label",
+      "id": 402846,
+      "title": "Abctitel",
+      "color": "Mycolor"
+>>>>>>> waqas-day4
     }
   ]
 }

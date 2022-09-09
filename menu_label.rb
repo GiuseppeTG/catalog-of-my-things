@@ -1,6 +1,10 @@
 class MenuLabel
   def label_options(item, labels)
+<<<<<<< HEAD
     puts 'Do you want to add a label to this item? [Y/N]'
+=======
+    puts 'Do you want to add a label to the item? [Y/N]'
+>>>>>>> waqas-day4
     answer = gets.chomp.upcase
     return if %w[N NO].include?(answer)
 

@@ -1,6 +1,7 @@
 {
   "items": [
     {
+<<<<<<< HEAD
       "json_class": "Book",
       "id": 788910,
       "publish_date": "2000-02-02",
@@ -35,6 +36,23 @@
         }
       ],
       "author": null,
+=======
+      "json_class": "Game",
+      "id": 17798,
+      "title": "mytitle",
+      "publish_date": "2022-3-2",
+      "archived": false,
+      "multiplayer": true,
+      "last_played_at": 1,
+      "author": [
+        {
+          "id": 67,
+          "first_name": "Waas",
+          "last_name": "Ahmad"
+        }
+      ],
+      "label": null,
+>>>>>>> waqas-day4
       "genre": null,
       "source": null
     }
