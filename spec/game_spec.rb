@@ -3,7 +3,7 @@ require_relative '../game'
 require_relative '../label'
 
 describe 'Game class' do
-  game = Game.new('title', '2000-12-24', 2, true)
+  game = Game.new('title', '2000-12-24', 3, true)
   label = Label.new('new', 'green')
   it 'Has an id' do
     expect(game.id).to be_truthy
