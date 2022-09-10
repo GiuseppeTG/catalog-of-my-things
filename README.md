@@ -1,56 +1,59 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Catalog of my things
 
-> Description the project.
+> Catalog-of-my-things is a console app that let the user to items the person own. It uses json file to save the data. It allow the person to list "Book, Movies, Games, Music etc" It allow
+ a person to add movies, games, books and music to his catalog. 
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- Json
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+## Live Demo (coming soon...)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
 ### Setup
 
-### Install
+- git clone https://github.com/GiuseppeTG/catalog-of-my-things
+- cd catalog-of-my-things
+- Open it with your favorite text editor.
 
-### Usage
+## Usage
 
-### Run tests
-
-### Deployment
-
-
+- cd [project-name]
+- Enter the command ruby main.rb
 
 ## Authors
 
-👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Giuseppe Tomasini**
 
-👤 **Author2**
+- GitHub: [@GiuseppeTG](https://github.com/GiuseppeTG)
+- Twitter: [@giusetomasini](https://twitter.com/giusetomasini)
+- LinkedIn: [Giuseppe Tomasini](https://www.linkedin.com/in/giuseppe-tomasini-67ba101a8/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Fernando César da Silva**
+
+- GitHub:   [@fernando-silvabr66](https://github.com/fernando-silvabr66)
+- Twitter:  [@fsilvabr1](https://twitter.com/fsilvabr1)
+- LinkedIn: [https://linkedin.com/in/fernando-silvabr66](https://linkedin.com/in/   fernando-silvabr66) 
+
+👤 **Waqas Ahmad**
+
+- GitHub: [@githubhandle](https://github.com/waqaskanju)
+- Twitter: [@twitterhandle](https://twitter.com/waqaskanju)
+- LinkedIn: [@LinkedIn](https://linkedin.com/in/waqaskanju)
+
+👤 **Emmanuel Orji-Ihuoma**
+
+- GitHub: [@emmiiorji](https://github.com/emmiiorji)
+- Twitter: [@emmiiorji](https://twitter.com/emmiiorji)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/orji-emmanuel)
+
 
 ## 🤝 Contributing
 
